@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8aeaad3c-6890-44a1-884f-1f2413c831ba" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../Compulation-math/.idea/workspace.xml" afterDir="false" />
@@ -2950,6 +2953,7 @@
       <change afterPath="$PROJECT_DIR$/../Transi/Задание__2__emu4.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Transi/Задание__4__emu0.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Transi/Задача_1__fz2h.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../practicalWork5/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../practicalWork5/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../practicalWork5/.idea/misc.xml" afterDir="false" />
@@ -3003,14 +3007,26 @@
       <change afterPath="$PROJECT_DIR$/../Информатика/timetable.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Информатика/timetable_lib.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Информатика/timetable_reg.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/isa.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
@@ -3022,6 +3038,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -3035,7 +3052,7 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="machine" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="csa-lab3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -3048,7 +3065,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -3066,7 +3083,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717956292560</updated>
-      <workItem from="1717956307473" duration="652000" />
+      <workItem from="1717956307473" duration="6350000" />
     </task>
     <servers />
   </component>
