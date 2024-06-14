@@ -1,7 +1,7 @@
 branch_commands = ["jmp", "jmn", "jmnn", "jmz", "jmnz", "jmc", "jmnc"]
 branch_flags = [None, "N", "!N", "Z", "!Z", "C", "!C"]
 op_commands = ["add", "load", "store", "cmp"] + branch_commands
-nop_commands = ["hlt", "cla", "asl", "asr", "inc", "dec", "push", "pop", "nop"]
+nop_commands = ["hlt", "cla", "asl", "asr", "inc", "dec", "nop"]
 
 NUM_RANGE = 31
 ADDR_RANGE = 11
@@ -11,7 +11,6 @@ MAX_NUM = 1 << NUM_RANGE  # числа от -2^31 до 2^31 - 1
 REAL_MAX = MAX_NUM * 2  # 2^32
 REAL_RANGE = NUM_RANGE + 1  # 32
 
-STACK_P = MAX_ADDR - 2
 INPUT_MAP = MAX_ADDR - 1
 OUTPUT_MAP = MAX_ADDR
 
