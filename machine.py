@@ -12,8 +12,6 @@ formatter = logging.Formatter("%(message)s")
 console_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 
-N, Z, C = 0, 0, 0
-
 def set_flags(res):
     N = 1 if res < 0 else 0
     Z = 1 if res == 0 else 0
