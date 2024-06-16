@@ -113,7 +113,7 @@ class DataPath:
 
 
 class ControlUnit:
-    def __init__(self, program, data_path, start_address, input_data, limit, tick):
+    def __init__(self, program, data_path, start_address, input_data, limit):
         self.program = program
         self.data_path = data_path
         self.limit = limit
@@ -160,9 +160,9 @@ class ControlUnit:
             )
         return res
 
-    def command_cycle(self, mode="main: "):
+    def command_cycle(self):
         while self.instr_counter < self.limit:
-            go_next = self.decode_and_execute_instruction(mode)
+            go_next = self.decode_and_execute_instruction()
             if not go_next:
                 return
             self.instr_counter += 1
@@ -171,12 +171,14 @@ class ControlUnit:
             pass
             print("Limit exceeded!")
 
-    def decode_and_execute_instruction(self, mode=""):
+    def decode_and_execute_instruction(self):
         self.sig_latch_reg("AR", self.calc(0, self.get_reg("IP"), "add"))  # IP -> AR
         self.sig_latch_reg("IP", self.calc(1, self.get_reg("IP"), "add"))  # IP + 1 -> AR
         self.sig_latch_reg("CR", self.data_path.memory[self.get_reg("AR")])
         instr = self.get_reg("CR")
         opcode = instr["opcode"]
+
+        self.tick()
 
         if "opcode" not in instr.keys():
             return False
@@ -191,17 +193,21 @@ class ControlUnit:
             if instr["address"]:
                 self.sig_latch_reg("AR", self.calc(0, self.get_reg("DR"), "add"))
                 self.sig_read()
+                self.tick()
 
             # цикл выборки операнда
             self.sig_latch_reg("AR", self.calc(0, self.get_reg("DR"), "add"))
             self.sig_read()
+            self.tick()
 
             if opcode == "load":
                 self.sig_latch_reg("AC", self.calc(0, self.get_reg("DR"), "add", True))
+                self.tick()
 
             elif opcode == "store":
                 self.sig_latch_reg("DR", self.calc(0, self.get_reg("AC"), "add"))
                 self.sig_write()
+                self.tick()
 
             elif opcode in branch_commands:
                 ind = branch_commands.index(opcode)
@@ -214,39 +220,32 @@ class ControlUnit:
                     condition = eval("self.get_flag('" + flag[0] + "')")
                 if condition:
                     self.sig_latch_reg("IP", self.calc(0, self.get_reg("AR"), "add"))
-                else:
-                    pass
+                self.tick()
             else:
                 # арифметическая операция
                 self.sig_latch_reg("AC", self.calc(self.get_reg("AC"), self.get_reg("DR"), opcode, True))
+                self.tick()
         # безадресная команда
         else:
             if opcode == "hlt":
+                self.tick()
                 return False
 
             elif opcode == "cla":
                 self.sig_latch_reg("AC", self.calc(self.get_reg("AC"), self.get_reg("AC"), "sub", True))
+                self.tick()
             elif opcode == "nop":
-                pass
+                self.tick()
             else:
                 # унарная арифметическая операция
                 self.sig_latch_reg("AC", self.calc(self.get_reg("AC"), None, opcode, True))
+                self.tick()
         return True  # executed successfully
-
-    def get_flag(self, flag):
-        PS = self.get_reg("PS")
-        if flag == 'N':
-            return (PS >> 2) & 1
-        elif flag == 'Z':
-            return (PS >> 1) & 1
-        elif flag == 'C':
-            return PS & 1
-        return 0
 
     def __print_symb__(self, text):
         return str((lambda x: ord(x) if isinstance(x, str) else x)(text))
 
-    def __print__(self, comment):
+    def __print__(self):
         state_repr = (
             "TICK: {:4} | AC {:7} | IP: {:4} | AR: {:4} | PS: {:3} | DR: {:7} | mem[AR] {:7} | CR: {:12} |"
         ).format(
@@ -260,14 +259,13 @@ class ControlUnit:
             self.get_reg("CR")["opcode"]
             + (lambda x: " " + str(x["operand"]) if "operand" in x.keys() else "")(self.get_reg("CR")),
         )
-        return state_repr + " " + comment
+        logger.info(state_repr)
 
 
 def simulation(code, limit, input_data, start_addr):
     start_address = start_addr
     data_path = DataPath()
-    _tick = None
-    control_unit = ControlUnit(code, data_path, start_address, input_data, limit, _tick)
+    control_unit = ControlUnit(code, data_path, start_address, input_data, limit)
     control_unit.command_cycle()
     return [control_unit.data_path.output_buffer, control_unit.instr_counter]
 
@@ -278,7 +276,7 @@ def main(code, input_f):
         if not input_text:
             input_token = []
         else:
-            input_token = eval(input_text)  # массив символов для ввода
+            input_token = eval(input_text)  
     start_addr, code = read_code(code)
     output, instr_num = simulation(
         code,
