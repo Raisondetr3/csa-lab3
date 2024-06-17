@@ -12,77 +12,88 @@ formatter = logging.Formatter("%(message)s")
 console_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 
-def set_flags(res):
-    N = 1 if res < 0 else 0
-    Z = 1 if res == 0 else 0
-    return N, Z
+class ALU:
+    def __init__(self):
+        self.left = 0
+        self.right = 0
+        self.N = 0
+        self.Z = 1
+        self.C = 0
 
-def invert_string(s):
-    return "".join(["1" if c == "0" else "0" for c in s])
+    def set_flags(self, res):
+        self.N = 1 if res < 0 else 0
+        self.Z = 1 if res == 0 else 0
 
-def to_unsigned(a):
-    return int(invert_string(bin(abs(a))[2:].zfill(REAL_RANGE)), 2) + 1
+    def invert_string(self, s):
+        return "".join(["1" if c == "0" else "0" for c in s])
 
-def to_signed(a):
-    C = 1 if a >= REAL_MAX else 0
-    a = a if C == 0 else a % REAL_MAX
-    return (a if MAX_NUM > a >= -MAX_NUM else -to_unsigned(a)), C
+    def to_unsigned(self, a):
+        return int(self.invert_string(bin(abs(a))[2:].zfill(REAL_RANGE)), 2) + 1
 
-def add(a, b):
-    a = a if a >= 0 else to_unsigned(a)
-    b = b if b >= 0 else to_unsigned(b)
-    return to_signed(a + b)
+    def to_signed(self, a):
+        self.C = 1 if a >= REAL_MAX else 0
+        a = a if self.C == 0 else a % REAL_MAX
+        return a if MAX_NUM > a >= -MAX_NUM else -self.to_unsigned(a)
 
-def sub(a, b):
-    a = a if a >= 0 else to_unsigned(a)
-    b = b if b >= 0 else to_unsigned(b)
-    return add(a, to_unsigned(b))
+    def add(self, a, b):
+        a = a if a >= 0 else self.to_unsigned(a)
+        b = b if b >= 0 else self.to_unsigned(b)
+        return self.to_signed(a + b)
 
-def div(a):
-    C = a % 2
-    return a // 2, C
+    def sub(self, a, b):
+        a = a if a >= 0 else self.to_unsigned(a)
+        b = b if b >= 0 else self.to_unsigned(b)
+        return self.add(a, self.to_unsigned(b))
 
-def calc_op(left, right, op_type):
-    if op_type == "add":
-        return add(left, right)
-    elif op_type == "sub" or op_type == "cmp":
-        return sub(left, right)
-    raise Exception("Incorrect binary operation")
+    def div(self, a):
+        self.C = a % 2
+        return a // 2
 
-def calc_nop(res, op_type):
-    if op_type == "asl":
-        return add(res, res)
-    elif op_type == "asr":
-        return div(res)
-    elif op_type == "inc":
-        return add(res, 1)
-    elif op_type == "dec":
-        return sub(res, 1)
-    raise Exception("Incorrect unary operation")
+    def calc_op(self, left, right, op_type):
+        if op_type == "add":
+            return self.add(left, right)
+        elif op_type == "sub" or op_type == "cmp":
+            return self.sub(left, right)
+        raise Exception("Incorrect binary operation")
 
-def alu_calc(left, right, op_type, change_flags=False):
-    is_left_char = True if isinstance(left, str) else False
-    left = ord(left) if is_left_char else int(left)
+    def calc_nop(self, res, op_type):
+        if op_type == "asl":
+            return self.add(res, res)
+        elif op_type == "asr":
+            return self.div(res)
+        elif op_type == "inc":
+            return self.add(res, 1)
+        elif op_type == "dec":
+            return self.sub(res, 1)
+        raise Exception("Incorrect unary operation")
 
-    if right is None:
-        res = left
-        is_right_char = False
-        res, C = calc_nop(res, op_type)
-    else:
-        is_right_char = True if isinstance(right, str) else False
-        right = ord(right) if is_right_char else int(right)
-        res, C = calc_op(left, right, op_type)
-    N, Z = set_flags(res) if change_flags else (0, 0)
-    if is_left_char or is_right_char:
-        res = chr(res)
-        if is_left_char:
-            left = chr(left)
-    return left if op_type == "cmp" else res, N, Z, C
+    def calc(self, left, right, op_type, change_flags=False):
+        is_left_char = True if isinstance(left, str) else False
+        left = ord(left) if is_left_char else int(left)
+        C = self.C
 
+        if right is None:
+            res = left
+            is_right_char = False
+            res = self.calc_nop(res, op_type)
+        else:
+            is_right_char = True if isinstance(right, str) else False
+            right = ord(right) if is_right_char else int(right)
+            res = self.calc_op(left, right, op_type)
+        if change_flags:
+            self.set_flags(res)
+        else:
+            self.C = C
+        if is_left_char or is_right_char:
+            res = chr(res)
+            if is_left_char:
+                left = chr(left)
+        return left if op_type == "cmp" else res
 
 class DataPath:
     registers = {"AC": 0, "AR": 0, "IP": 0, "PC": 0, "PS": 0, "DR": 0, "CR": 0}
     memory = []
+    alu = ALU()
 
     def __init__(self):
         self.mem_size = MAX_ADDR + 1
@@ -149,14 +160,14 @@ class ControlUnit:
         return self._tick
 
     def calc(self, left, right, op, change_flags=False):
-        res, N, Z, C = alu_calc(left, right, op, change_flags)
+        res = self.data_path.alu.calc(left, right, op, change_flags)
         if change_flags:
-            self.sig_latch_reg("PS", self.get_reg("PS") ^ ((self.get_reg("PS") ^ C) & 1))
+            self.sig_latch_reg("PS", self.get_reg("PS") ^ ((self.get_reg("PS") ^ self.data_path.alu.C) & 1))
             self.sig_latch_reg(
-                "PS", self.get_reg("PS") ^ ((self.get_reg("PS") ^ (Z << 1)) & (1 << 1))
+                "PS", self.get_reg("PS") ^ ((self.get_reg("PS") ^ (self.data_path.alu.Z << 1)) & (1 << 1))
             )
             self.sig_latch_reg(
-                "PS", self.get_reg("PS") ^ ((self.get_reg("PS") ^ (N << 2)) & (1 << 2))
+                "PS", self.get_reg("PS") ^ ((self.get_reg("PS") ^ (self.data_path.alu.N << 2)) & (1 << 2))
             )
         return res
 
@@ -166,7 +177,7 @@ class ControlUnit:
             if not go_next:
                 return
             self.instr_counter += 1
-            self.__print__("")
+            self.__print__()
         if self.instr_counter >= self.limit:
             pass
             print("Limit exceeded!")
@@ -215,9 +226,9 @@ class ControlUnit:
                 condition = True
 
                 if (flag is not None) and flag[0] == "!":
-                    condition = eval("not self.get_flag('" + flag[1] + "')")
+                    condition = eval("not self.data_path.alu." + flag[1])
                 elif flag is not None:
-                    condition = eval("self.get_flag('" + flag[0] + "')")
+                    condition = eval("self.data_path.alu." + flag[0])
                 if condition:
                     self.sig_latch_reg("IP", self.calc(0, self.get_reg("AR"), "add"))
                 self.tick()
@@ -267,7 +278,7 @@ def simulation(code, limit, input_data, start_addr):
     data_path = DataPath()
     control_unit = ControlUnit(code, data_path, start_address, input_data, limit)
     control_unit.command_cycle()
-    return [control_unit.data_path.output_buffer, control_unit.instr_counter]
+    return [control_unit.data_path.output_buffer, control_unit.instr_counter, control_unit.current_tick()]
 
 
 def main(code, input_f):
@@ -278,13 +289,13 @@ def main(code, input_f):
         else:
             input_token = eval(input_text)  
     start_addr, code = read_code(code)
-    output, instr_num = simulation(
+    output, instr_num, ticks = simulation(
         code,
         limit=1500,
         input_data=input_token,
         start_addr=start_addr,
     )
-    print(f"Output: {output}\nInstruction number: {instr_num}")
+    print(f"Output: {output}\nInstruction number: {instr_num}\nTicks: {ticks - 1}")
 
 
 if __name__ == "__main__":
