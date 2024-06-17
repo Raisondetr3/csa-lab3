@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import logging
 import sys
-
 from isa import *
 
 logger = logging.getLogger("machine_logger")
@@ -95,13 +94,13 @@ class DataPath:
     memory = []
     alu = ALU()
 
-    def __init__(self):
+    def __init__(self, input_buffer):
         self.mem_size = MAX_ADDR + 1
         self.memory = [{"value": 0}] * self.mem_size
         self.registers["AC"] = 0
         self.registers["PS"] = 2  # self.Z = 1
         self.output_buffer = []
-        self.input_buffer = []
+        self.input_buffer = input_buffer
 
     def get_reg(self, reg):
         return self.registers[reg]
@@ -112,19 +111,22 @@ class DataPath:
     def wr(self):
         self.memory[self.registers["AR"]] = {"value": self.registers["DR"]}
         if self.registers["AR"] == OUTPUT_MAP:
-            self.output_buffer.append(self.registers["DR"])
+            self.output_buffer.append(chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"])
             logger.info("OUTPUT " + str(self.output_buffer[-1]))
 
     def rd(self):
         self.registers["DR"] = self.memory[self.registers["AR"]]["value"]
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
-                self.registers["DR"] = self.input_buffer.pop(0)
-                logger.info("INPUT " + str(self.registers["DR"]))
-
+                self.registers["DR"] = ord(self.input_buffer.pop(0))
+                logger.info("INPUT " + chr(self.registers["DR"]))
+            else:
+                logger.warning("Input_buffer is empty!")
+                logger.info(f"OUTPUT: {''.join(self.output_buffer)}")
+                sys.exit()
 
 class ControlUnit:
-    def __init__(self, program, data_path, start_address, input_data, limit):
+    def __init__(self, program, data_path, start_address, limit):
         self.program = program
         self.data_path = data_path
         self.limit = limit
@@ -133,9 +135,6 @@ class ControlUnit:
 
         self.sig_latch_reg("IP", start_address)
         self._map_instruction()
-
-        self.input_data = input_data
-        self.input_pointer = 0
 
     def _map_instruction(self):
         for i in self.program:
@@ -179,7 +178,6 @@ class ControlUnit:
             self.instr_counter += 1
             self.__print__()
         if self.instr_counter >= self.limit:
-            pass
             print("Limit exceeded!")
 
     def decode_and_execute_instruction(self):
@@ -187,6 +185,11 @@ class ControlUnit:
         self.sig_latch_reg("IP", self.calc(1, self.get_reg("IP"), "add"))  # IP + 1 -> AR
         self.sig_latch_reg("CR", self.data_path.memory[self.get_reg("AR")])
         instr = self.get_reg("CR")
+
+        if "opcode" not in instr.keys():
+            print(f"Error: No opcode found in instruction at memory location {self.get_reg('AR')}")
+            return False
+
         opcode = instr["opcode"]
 
         self.tick()
@@ -275,19 +278,16 @@ class ControlUnit:
 
 def simulation(code, limit, input_data, start_addr):
     start_address = start_addr
-    data_path = DataPath()
-    control_unit = ControlUnit(code, data_path, start_address, input_data, limit)
+    data_path = DataPath(input_data)
+    control_unit = ControlUnit(code, data_path, start_address, limit)
     control_unit.command_cycle()
     return [control_unit.data_path.output_buffer, control_unit.instr_counter, control_unit.current_tick()]
-
 
 def main(code, input_f):
     with open(input_f, encoding="utf-8") as file:
         input_text = file.read()
-        if not input_text:
-            input_token = []
-        else:
-            input_token = eval(input_text)  
+        input_token = list(input_text)  # Use list of characters directly
+
     start_addr, code = read_code(code)
     output, instr_num, ticks = simulation(
         code,
@@ -295,11 +295,9 @@ def main(code, input_f):
         input_data=input_token,
         start_addr=start_addr,
     )
-    print(f"Output: {output}\nInstruction number: {instr_num}\nTicks: {ticks - 1}")
-
+    print(f"Output: {''.join(output)}\nInstruction number: {instr_num}\nTicks: {ticks - 1}")
 
 if __name__ == "__main__":
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
-    d = DataPath()
     main(code_file, input_file)
