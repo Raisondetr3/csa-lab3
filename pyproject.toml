@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "myavasm"
+name = "myasm"
 version = "0.1.1"
 description = "asm-like language and model as Lab-3 for CSA class."
 authors = ["Igor Borinskiy <s367911@niuitmo.ru>"]
