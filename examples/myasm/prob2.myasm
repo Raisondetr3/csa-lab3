@@ -1,0 +1,28 @@
+org 1
+f1: word: 1
+f2: word: 2
+temp_f: word: 0
+n: word: 4000000    ; increase to 4 million
+sum: word: 2        ; f2 is even
+out: word: 2047
+
+start: cla
+    loop: load f2
+    store temp_f
+    add f1
+    store f2
+    cmp n
+    jmn check
+    jmz check
+    load sum
+    store (out)
+    hlt
+
+check: asr
+    jmc swap
+    asl                 ; it's correct because number was even
+    add sum
+    store sum
+    swap: load temp_f
+    store f1
+    jmp loop
