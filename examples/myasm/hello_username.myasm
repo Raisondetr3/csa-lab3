@@ -1,83 +1,34 @@
 org 0
-line_end: word: 10      ; end-of-line code
-stop_input: word: 0     ; flag
-in: word: 2046          ; input memory location
-out: word: 2047         ; output memory location
+line_end: word: 0         ; End-of-line code
+stop_input: word: 0       ; Flag to stop input
+in: word: 2046            ; Input buffer address
+out: word: 2047           ; Output buffer address
 
-question: word: 19, 'What is your name? '
+question: word: 18, 'What is your name?'
 question_addr: word: question
-question_ret: word: enter_name_loop
 
-greeting: word: 7, 'Hello, '
+greeting: word: 8, ' Hello, '
 greeting_addr: word: greeting
-greeting_ret: word: name_print
 
 exclamation: word: 1, '!'
 exclamation_addr: word: exclamation
-exclamation_ret: word: end
 
 print_cnt: word: 0
 print_addr: word: 0
 print_str: word: 0
-return_address: word: 0
-
-user_name_ret: word: exclamation_print
 user_name_start: word: user_name
 user_name_address: word: user_name
-user_name: word: 0      ; buffer to store user input characters
+user_name_len: word: 0
+
+org 50
+user_name: word: 30       ; Allocate 30 words for the username
 
 org 100
 start: load question
        store print_str
        load question_addr
        store print_addr
-       load question_ret
-       store return_address
        jmp print_loop
-
-enter_name_loop: load (in)            ; Read character from input buffer
-                 cmp line_end         ; Check if it is the end-of-line character
-                 jmnz save_symb       ; If not, save the character and continue reading
-                 load stop_input      ; If end-of-line, set stop_input flag
-                 inc
-                 store stop_input
-                 jmp greeting_print
-
-save_symb: load user_name_address
-           inc
-           store user_name_address
-           load (in)
-           store (user_name_address)  ; Store the input character at the current address
-           load user_name_start
-           inc
-           store user_name_start      ; Increment the user name start address
-           jmp enter_name_loop
-
-greeting_print: load greeting
-                store print_str
-                load greeting_addr
-                store print_addr
-                load greeting_ret
-                store return_address
-                jmp print_loop
-
-name_print: load user_name
-            store print_str
-            load user_name_address
-            store print_addr
-            load user_name_ret
-            store return_address
-            jmp print_loop
-
-exclamation_print: load exclamation
-                   store print_str
-                   load exclamation_addr
-                   store print_addr
-                   load exclamation_ret
-                   store return_address
-                   jmp print_loop
-
-end: hlt
 
 print_loop: load print_str
             store print_cnt
@@ -89,5 +40,54 @@ loop:       load print_addr
             load print_cnt
             dec
             store print_cnt
-            jmz (return_address)
+            jmz check_next
             jmp loop
+
+check_next: load stop_input
+            jmz enter_name_loop
+            jmp name_print
+
+enter_name_loop: load (in)            ; Read character from input buffer
+                 cmp line_end         ; Check if it is the end-of-line character
+                 jmnz save_symb       ; If not, save the character and continue reading
+                 load stop_input      ; If end-of-line, set stop_input flag
+                 inc
+                 store stop_input
+                 jmp greeting_print
+
+save_symb: store tmp
+           load user_name_address
+           store print_addr
+           load tmp
+           store (print_addr)
+           load user_name_len
+           inc
+           store user_name_len
+           load user_name_address
+           inc
+           store user_name_address
+           jmp enter_name_loop
+
+greeting_print: load greeting
+                store print_str
+                load greeting_addr
+                store print_addr
+                jmp print_loop
+
+name_print: load user_name_start
+            store print_str
+            load user_name_len
+            store print_cnt
+            load user_name_start
+            store print_addr
+            jmp print_loop
+
+exclamation_print: load exclamation
+                   store print_str
+                   load exclamation_addr
+                   store print_addr
+                   jmp print_loop
+
+end: hlt
+
+tmp: word: 0

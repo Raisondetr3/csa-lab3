@@ -1,5 +1,5 @@
-org 2
-hello: word: 12, 'Hello world!'  ; Pascal string with length 12
+org 0
+hello: word: 12, 'Hello world!'  ; pstr
 addr: word: hello
 cnt: word: 0
 out: word: 2047
@@ -7,6 +7,7 @@ out: word: 2047
 org 25
 start: load hello
        store cnt
+
 loop:  load addr
        inc
        store addr
@@ -17,4 +18,5 @@ loop:  load addr
        store cnt
        jmz end
        jmp loop
-end:   hlt
+
+ end:   hlt

@@ -110,20 +110,27 @@ class DataPath:
 
     def wr(self):
         self.memory[self.registers["AR"]] = {"value": self.registers["DR"]}
+        if isinstance(self.registers["DR"], int):
+            print(f"DEBUG: Writing to memory {chr(self.registers['DR'])} at address {self.registers['AR']}")
+        else:
+            print(f"DEBUG: Writing to memory {self.registers['DR']} at address {self.registers['AR']}")
         if self.registers["AR"] == OUTPUT_MAP:
-            self.output_buffer.append(chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"])
+            char_to_output = chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"]
+            self.output_buffer.append(char_to_output)
             logger.info("OUTPUT " + str(self.output_buffer[-1]))
 
-    def rd(self):
+
+    def rd(self, instr_counter, current_tick):
         self.registers["DR"] = self.memory[self.registers["AR"]]["value"]
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
-                self.registers["DR"] = ord(self.input_buffer.pop(0))
-                logger.info("INPUT " + chr(self.registers["DR"]))
+                self.registers["DR"] = self.input_buffer.pop(0)
+                logger.info("INPUT " + str(self.registers["DR"]))
             else:
                 logger.warning("Input_buffer is empty!")
-                logger.info(f"OUTPUT: {''.join(self.output_buffer)}")
-                sys.exit()
+                print(f"Output: {''.join(self.output_buffer)}\nInstruction number: {instr_counter}\nTicks: {current_tick - 1}")
+                sys.exit(1)
+
 
 class ControlUnit:
     def __init__(self, program, data_path, start_address, limit):
@@ -150,7 +157,7 @@ class ControlUnit:
         self.data_path.wr()
 
     def sig_read(self):
-        self.data_path.rd()
+        self.data_path.rd(self.instr_counter, self.current_tick())
 
     def tick(self):
         self._tick += 1
@@ -185,10 +192,6 @@ class ControlUnit:
         self.sig_latch_reg("IP", self.calc(1, self.get_reg("IP"), "add"))  # IP + 1 -> AR
         self.sig_latch_reg("CR", self.data_path.memory[self.get_reg("AR")])
         instr = self.get_reg("CR")
-
-        if "opcode" not in instr.keys():
-            print(f"Error: No opcode found in instruction at memory location {self.get_reg('AR')}")
-            return False
 
         opcode = instr["opcode"]
 
@@ -263,7 +266,7 @@ class ControlUnit:
         state_repr = (
             "TICK: {:4} | AC {:7} | IP: {:4} | AR: {:4} | PS: {:3} | DR: {:7} | mem[AR] {:7} | CR: {:12} |"
         ).format(
-            self.instr_counter,
+            self.current_tick(),
             self.__print_symb__(self.get_reg("AC")),
             str(self.get_reg("IP")),
             str(self.get_reg("AR")),
