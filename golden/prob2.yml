@@ -63,6 +63,7 @@ out_stdout: |
   Output: [4613732]
   Instruction number: 370
   Ticks: 1071
+
 out_log: |
   DEBUG    TICK:    2 | AC 0       | IP: 7    | AR: 6    | PS: 011 | DR: 0       | mem[AR] 0       | CR: cla          |
   DEBUG    TICK:    5 | AC 2       | IP: 8    | AR: 1    | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 1       |

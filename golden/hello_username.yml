@@ -237,6 +237,7 @@ out_stdout: |
   ============================================================
   What is your name? Hello, Igor!
   instr_counter: 409 ticks: 1225
+
 out_log: |
   DEBUG    TICK:    3 | AC 18      | IP: 101  | AR: 6    | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 6       |
   DEBUG    TICK:    6 | AC 18      | IP: 102  | AR: 41   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 41     |

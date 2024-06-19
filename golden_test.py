@@ -7,17 +7,10 @@ import tempfile
 import machine
 import translator
 import pytest
-from custom_formatter import CustomFormatter
 
 @pytest.mark.golden_test("golden/*.yml")
 def test_translator_and_machine(golden, caplog):
-    logger = logging.getLogger('machine')
-    logger.setLevel(logging.DEBUG)
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
-    formatter = CustomFormatter('%(levelname)-8s %(name)s:%(funcName)-10s%(message)s')
-    ch.setFormatter(formatter)
-    logger.addHandler(ch)
+    caplog.set_level(logging.DEBUG)
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         source = os.path.join(tmpdirname, "source.myasm")
