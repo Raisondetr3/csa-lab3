@@ -15,6 +15,11 @@ logging.basicConfig(level=logging.DEBUG)
 def test_translator_and_machine(golden, caplog):
     caplog.set_level(logging.DEBUG)
 
+    log_stream = io.StringIO()
+    stream_handler = logging.StreamHandler(log_stream)
+    stream_handler.setFormatter(logging.Formatter('%(levelname)s:%(name)s:%(message)s'))
+    logger.addHandler(stream_handler)
+
     with tempfile.TemporaryDirectory() as tmpdirname:
         source = os.path.join(tmpdirname, "source.myasm")
         input_stream = os.path.join(tmpdirname, "input.txt")
