@@ -1,14 +1,12 @@
 import contextlib
 import io
-import logging.config
+import logging
 import os
 import tempfile
 
 import machine
 import translator
 import pytest
-
-logging.config.fileConfig('logging.conf')
 
 @pytest.mark.golden_test("golden/*.yml")
 def test_translator_and_machine(golden, caplog):
