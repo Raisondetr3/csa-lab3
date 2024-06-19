@@ -1,16 +1,11 @@
 #!/usr/bin/python3
 import logging
 import sys
+import logging.config
 
 from isa import *
 
-logger = logging.getLogger("machine_logger")
-logger.setLevel(logging.INFO)
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-formatter = logging.Formatter("%(message)s")
-console_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
+
 
 class ALU:
     def __init__(self):
@@ -301,11 +296,7 @@ def main(code, input_f):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format='DEBUG    %(message)s',
-        handlers=[logging.StreamHandler(sys.stdout)]
-    )
+    logging.config.fileConfig('logging.conf')
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
     main(code_file, input_file)
