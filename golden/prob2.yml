@@ -60,7 +60,7 @@ out_code: |
 out_stdout: |
   source LoC: 29 code instr: 25
   ============================================================
-  Output: [4613732]
+  Output: 4613732
   Instruction number: 370
   Ticks: 1071
 
