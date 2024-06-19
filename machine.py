@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 import logging
 import sys
-import logging.config
 
 from isa import *
-
-
 
 class ALU:
     def __init__(self):
@@ -296,7 +293,11 @@ def main(code, input_f):
 
 
 if __name__ == "__main__":
-    logging.config.fileConfig('logging.conf')
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='DEBUG    %(message)s',
+        handlers=[logging.StreamHandler(sys.stdout)]
+    )
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
     main(code_file, input_file)
