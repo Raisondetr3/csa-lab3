@@ -62,7 +62,7 @@ out_stdout: |
   ============================================================
   Output: 4613732
   Instruction number: 370
-  Ticks: 1071
+  Ticks: 1072
 
 out_log: |
   DEBUG   machine:__print__     TICK:    2 | AC 0       | IP: 7    | AR: 6    | PS: 011 | DR: 0       | mem[AR] 0       | CR: cla          |
