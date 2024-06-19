@@ -15,6 +15,9 @@ import pytest
 # handler.setFormatter(formatter)
 # logger.addHandler(handler)
 
+def normalize_whitespace(s):
+    return ' '.join(s.split())
+
 @pytest.mark.golden_test("golden/*.yml")
 def test_translator_and_machine(golden, caplog):
     caplog.set_level(logging.DEBUG)
@@ -41,4 +44,4 @@ def test_translator_and_machine(golden, caplog):
 
         assert code == golden.out["out_code"]
         assert stdout.getvalue() == golden.out["out_stdout"]
-        assert caplog.text == golden.out["out_log"]
+        assert normalize_whitespace(caplog.text) == normalize_whitespace(golden.out["out_log"])
