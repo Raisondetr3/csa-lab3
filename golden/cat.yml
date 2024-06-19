@@ -1,4 +1,4 @@
-in_source: |
+in_source: | -
   org 0
   line_end: word: 0          ; end-of-line code
   stop_input: word: 0        ; flag
