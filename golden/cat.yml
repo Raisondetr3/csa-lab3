@@ -46,7 +46,7 @@ out_stdout: |
   ============================================================
   Output: foo
   Instruction number: 32
-  Ticks: 103
+  Ticks: 104
 
 out_log: |
   DEBUG   machine:__print__     TICK:    3 | AC 0       | IP: 11   | AR: 1    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 1       |
