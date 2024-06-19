@@ -64,139 +64,140 @@ out_stdout: |
   Ticks: 365
 
 out_log: |
-  DEBUG:__main__:TICK:    3 | AC 12      | IP: 26   | AR: 0    | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 0       |
-  DEBUG:__main__:TICK:    6 | AC 12      | IP: 27   | AR: 14   | PS: 000 | DR: 12      | mem[AR] 12      | CR: store 14     |
-  DEBUG:__main__:TICK:    9 | AC 0       | IP: 28   | AR: 13   | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 13      |
-  DEBUG:__main__:TICK:   11 | AC 1       | IP: 29   | AR: 28   | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:   14 | AC 1       | IP: 30   | AR: 13   | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 13     |
-  DEBUG:__main__:TICK:   18 | AC 72      | IP: 31   | AR: 1    | PS: 000 | DR: 72      | mem[AR] 72      | CR: load 13      |
-  DEBUG:__main__:OUTPUT H
-  DEBUG:__main__:TICK:   22 | AC 72      | IP: 32   | AR: 2047 | PS: 000 | DR: 72      | mem[AR] 72      | CR: store 15     |
-  DEBUG:__main__:TICK:   25 | AC 12      | IP: 33   | AR: 14   | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 14      |
-  DEBUG:__main__:TICK:   27 | AC 11      | IP: 34   | AR: 33   | PS: 001 | DR: 12      | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:   30 | AC 11      | IP: 35   | AR: 14   | PS: 001 | DR: 11      | mem[AR] 11      | CR: store 14     |
-  DEBUG:__main__:TICK:   33 | AC 11      | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:   36 | AC 11      | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:   39 | AC 1       | IP: 28   | AR: 13   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 13      |
-  DEBUG:__main__:TICK:   41 | AC 2       | IP: 29   | AR: 28   | PS: 000 | DR: 1       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:   44 | AC 2       | IP: 30   | AR: 13   | PS: 000 | DR: 2       | mem[AR] 2       | CR: store 13     |
-  DEBUG:__main__:TICK:   48 | AC 101     | IP: 31   | AR: 2    | PS: 000 | DR: 101     | mem[AR] 101     | CR: load 13      |
-  DEBUG:__main__:OUTPUT e
-  DEBUG:__main__:TICK:   52 | AC 101     | IP: 32   | AR: 2047 | PS: 000 | DR: 101     | mem[AR] 101     | CR: store 15     |
-  DEBUG:__main__:TICK:   55 | AC 11      | IP: 33   | AR: 14   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 14      |
-  DEBUG:__main__:TICK:   57 | AC 10      | IP: 34   | AR: 33   | PS: 001 | DR: 11      | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:   60 | AC 10      | IP: 35   | AR: 14   | PS: 001 | DR: 10      | mem[AR] 10      | CR: store 14     |
-  DEBUG:__main__:TICK:   63 | AC 10      | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:   66 | AC 10      | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:   69 | AC 2       | IP: 28   | AR: 13   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 13      |
-  DEBUG:__main__:TICK:   71 | AC 3       | IP: 29   | AR: 28   | PS: 000 | DR: 2       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:   74 | AC 3       | IP: 30   | AR: 13   | PS: 000 | DR: 3       | mem[AR] 3       | CR: store 13     |
-  DEBUG:__main__:TICK:   78 | AC 108     | IP: 31   | AR: 3    | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 13      |
-  DEBUG:__main__:OUTPUT l
-  DEBUG:__main__:TICK:   82 | AC 108     | IP: 32   | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 15     |
-  DEBUG:__main__:TICK:   85 | AC 10      | IP: 33   | AR: 14   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 14      |
-  DEBUG:__main__:TICK:   87 | AC 9       | IP: 34   | AR: 33   | PS: 001 | DR: 10      | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:   90 | AC 9       | IP: 35   | AR: 14   | PS: 001 | DR: 9       | mem[AR] 9       | CR: store 14     |
-  DEBUG:__main__:TICK:   93 | AC 9       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:   96 | AC 9       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:   99 | AC 3       | IP: 28   | AR: 13   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 13      |
-  DEBUG:__main__:TICK:  101 | AC 4       | IP: 29   | AR: 28   | PS: 000 | DR: 3       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  104 | AC 4       | IP: 30   | AR: 13   | PS: 000 | DR: 4       | mem[AR] 4       | CR: store 13     |
-  DEBUG:__main__:TICK:  108 | AC 108     | IP: 31   | AR: 4    | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 13      |
-  DEBUG:__main__:OUTPUT l
-  DEBUG:__main__:TICK:  112 | AC 108     | IP: 32   | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 15     |
-  DEBUG:__main__:TICK:  115 | AC 9       | IP: 33   | AR: 14   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 14      |
-  DEBUG:__main__:TICK:  117 | AC 8       | IP: 34   | AR: 33   | PS: 001 | DR: 9       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  120 | AC 8       | IP: 35   | AR: 14   | PS: 001 | DR: 8       | mem[AR] 8       | CR: store 14     |
-  DEBUG:__main__:TICK:  123 | AC 8       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  126 | AC 8       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  129 | AC 4       | IP: 28   | AR: 13   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 13      |
-  DEBUG:__main__:TICK:  131 | AC 5       | IP: 29   | AR: 28   | PS: 000 | DR: 4       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  134 | AC 5       | IP: 30   | AR: 13   | PS: 000 | DR: 5       | mem[AR] 5       | CR: store 13     |
-  DEBUG:__main__:TICK:  138 | AC 111     | IP: 31   | AR: 5    | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 13      |
-  DEBUG:__main__:OUTPUT o
-  DEBUG:__main__:TICK:  142 | AC 111     | IP: 32   | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 15     |
-  DEBUG:__main__:TICK:  145 | AC 8       | IP: 33   | AR: 14   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 14      |
-  DEBUG:__main__:TICK:  147 | AC 7       | IP: 34   | AR: 33   | PS: 001 | DR: 8       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  150 | AC 7       | IP: 35   | AR: 14   | PS: 001 | DR: 7       | mem[AR] 7       | CR: store 14     |
-  DEBUG:__main__:TICK:  153 | AC 7       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  156 | AC 7       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  159 | AC 5       | IP: 28   | AR: 13   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 13      |
-  DEBUG:__main__:TICK:  161 | AC 6       | IP: 29   | AR: 28   | PS: 000 | DR: 5       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  164 | AC 6       | IP: 30   | AR: 13   | PS: 000 | DR: 6       | mem[AR] 6       | CR: store 13     |
-  DEBUG:__main__:TICK:  168 | AC 32      | IP: 31   | AR: 6    | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 13      |
-  DEBUG:__main__:OUTPUT  
-  DEBUG:__main__:TICK:  172 | AC 32      | IP: 32   | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 15     |
-  DEBUG:__main__:TICK:  175 | AC 7       | IP: 33   | AR: 14   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 14      |
-  DEBUG:__main__:TICK:  177 | AC 6       | IP: 34   | AR: 33   | PS: 001 | DR: 7       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  180 | AC 6       | IP: 35   | AR: 14   | PS: 001 | DR: 6       | mem[AR] 6       | CR: store 14     |
-  DEBUG:__main__:TICK:  183 | AC 6       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  186 | AC 6       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  189 | AC 6       | IP: 28   | AR: 13   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 13      |
-  DEBUG:__main__:TICK:  191 | AC 7       | IP: 29   | AR: 28   | PS: 000 | DR: 6       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  194 | AC 7       | IP: 30   | AR: 13   | PS: 000 | DR: 7       | mem[AR] 7       | CR: store 13     |
-  DEBUG:__main__:TICK:  198 | AC 119     | IP: 31   | AR: 7    | PS: 000 | DR: 119     | mem[AR] 119     | CR: load 13      |
-  DEBUG:__main__:OUTPUT w
-  DEBUG:__main__:TICK:  202 | AC 119     | IP: 32   | AR: 2047 | PS: 000 | DR: 119     | mem[AR] 119     | CR: store 15     |
-  DEBUG:__main__:TICK:  205 | AC 6       | IP: 33   | AR: 14   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 14      |
-  DEBUG:__main__:TICK:  207 | AC 5       | IP: 34   | AR: 33   | PS: 001 | DR: 6       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  210 | AC 5       | IP: 35   | AR: 14   | PS: 001 | DR: 5       | mem[AR] 5       | CR: store 14     |
-  DEBUG:__main__:TICK:  213 | AC 5       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  216 | AC 5       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  219 | AC 7       | IP: 28   | AR: 13   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 13      |
-  DEBUG:__main__:TICK:  221 | AC 8       | IP: 29   | AR: 28   | PS: 000 | DR: 7       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  224 | AC 8       | IP: 30   | AR: 13   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 13     |
-  DEBUG:__main__:TICK:  228 | AC 111     | IP: 31   | AR: 8    | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 13      |
-  DEBUG:__main__:OUTPUT o
-  DEBUG:__main__:TICK:  232 | AC 111     | IP: 32   | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 15     |
-  DEBUG:__main__:TICK:  235 | AC 5       | IP: 33   | AR: 14   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 14      |
-  DEBUG:__main__:TICK:  237 | AC 4       | IP: 34   | AR: 33   | PS: 001 | DR: 5       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  240 | AC 4       | IP: 35   | AR: 14   | PS: 001 | DR: 4       | mem[AR] 4       | CR: store 14     |
-  DEBUG:__main__:TICK:  243 | AC 4       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  246 | AC 4       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  249 | AC 8       | IP: 28   | AR: 13   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 13      |
-  DEBUG:__main__:TICK:  251 | AC 9       | IP: 29   | AR: 28   | PS: 000 | DR: 8       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  254 | AC 9       | IP: 30   | AR: 13   | PS: 000 | DR: 9       | mem[AR] 9       | CR: store 13     |
-  DEBUG:__main__:TICK:  258 | AC 114     | IP: 31   | AR: 9    | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 13      |
-  DEBUG:__main__:OUTPUT r
-  DEBUG:__main__:TICK:  262 | AC 114     | IP: 32   | AR: 2047 | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 15     |
-  DEBUG:__main__:TICK:  265 | AC 4       | IP: 33   | AR: 14   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 14      |
-  DEBUG:__main__:TICK:  267 | AC 3       | IP: 34   | AR: 33   | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  270 | AC 3       | IP: 35   | AR: 14   | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 14     |
-  DEBUG:__main__:TICK:  273 | AC 3       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  276 | AC 3       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  279 | AC 9       | IP: 28   | AR: 13   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 13      |
-  DEBUG:__main__:TICK:  281 | AC 10      | IP: 29   | AR: 28   | PS: 000 | DR: 9       | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  284 | AC 10      | IP: 30   | AR: 13   | PS: 000 | DR: 10      | mem[AR] 10      | CR: store 13     |
-  DEBUG:__main__:TICK:  288 | AC 108     | IP: 31   | AR: 10   | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 13      |
-  DEBUG:__main__:OUTPUT l
-  DEBUG:__main__:TICK:  292 | AC 108     | IP: 32   | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 15     |
-  DEBUG:__main__:TICK:  295 | AC 3       | IP: 33   | AR: 14   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 14      |
-  DEBUG:__main__:TICK:  297 | AC 2       | IP: 34   | AR: 33   | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  300 | AC 2       | IP: 35   | AR: 14   | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 14     |
-  DEBUG:__main__:TICK:  303 | AC 2       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  306 | AC 2       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  309 | AC 10      | IP: 28   | AR: 13   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 13      |
-  DEBUG:__main__:TICK:  311 | AC 11      | IP: 29   | AR: 28   | PS: 000 | DR: 10      | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  314 | AC 11      | IP: 30   | AR: 13   | PS: 000 | DR: 11      | mem[AR] 11      | CR: store 13     |
-  DEBUG:__main__:TICK:  318 | AC 100     | IP: 31   | AR: 11   | PS: 000 | DR: 100     | mem[AR] 100     | CR: load 13      |
-  DEBUG:__main__:OUTPUT d
-  DEBUG:__main__:TICK:  322 | AC 100     | IP: 32   | AR: 2047 | PS: 000 | DR: 100     | mem[AR] 100     | CR: store 15     |
-  DEBUG:__main__:TICK:  325 | AC 2       | IP: 33   | AR: 14   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 14      |
-  DEBUG:__main__:TICK:  327 | AC 1       | IP: 34   | AR: 33   | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  330 | AC 1       | IP: 35   | AR: 14   | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 14     |
-  DEBUG:__main__:TICK:  333 | AC 1       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  336 | AC 1       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
-  DEBUG:__main__:TICK:  339 | AC 11      | IP: 28   | AR: 13   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 13      |
-  DEBUG:__main__:TICK:  341 | AC 12      | IP: 29   | AR: 28   | PS: 000 | DR: 11      | mem[AR] 0       | CR: inc          |
-  DEBUG:__main__:TICK:  344 | AC 12      | IP: 30   | AR: 13   | PS: 000 | DR: 12      | mem[AR] 12      | CR: store 13     |
-  DEBUG:__main__:TICK:  348 | AC 33      | IP: 31   | AR: 12   | PS: 000 | DR: 33      | mem[AR] 33      | CR: load 13      |
-  DEBUG:__main__:OUTPUT !
-  DEBUG:__main__:TICK:  352 | AC 33      | IP: 32   | AR: 2047 | PS: 000 | DR: 33      | mem[AR] 33      | CR: store 15     |
-  DEBUG:__main__:TICK:  355 | AC 1       | IP: 33   | AR: 14   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 14      |
-  DEBUG:__main__:TICK:  357 | AC 0       | IP: 34   | AR: 33   | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
-  DEBUG:__main__:TICK:  360 | AC 0       | IP: 35   | AR: 14   | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 14     |
-  DEBUG:__main__:TICK:  363 | AC 0       | IP: 37   | AR: 37   | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
-  DEBUG:__main__:TICK:  365 | AC 0       | IP: 38   | AR: 37   | PS: 011 | DR: 0       | mem[AR] 0       | CR: hlt          |
+  TICK:    3 | AC 12      | IP: 26   | AR: 0    | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 0       |
+  TICK:    6 | AC 12      | IP: 27   | AR: 14   | PS: 000 | DR: 12      | mem[AR] 12      | CR: store 14     |
+  TICK:    9 | AC 0       | IP: 28   | AR: 13   | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 13      |
+  TICK:   11 | AC 1       | IP: 29   | AR: 28   | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
+  TICK:   14 | AC 1       | IP: 30   | AR: 13   | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 13     |
+  TICK:   18 | AC 72      | IP: 31   | AR: 1    | PS: 000 | DR: 72      | mem[AR] 72      | CR: load 13      |
+  OUTPUT H
+  TICK:   22 | AC 72      | IP: 32   | AR: 2047 | PS: 000 | DR: 72      | mem[AR] 72      | CR: store 15     |
+  TICK:   25 | AC 12      | IP: 33   | AR: 14   | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 14      |
+  TICK:   27 | AC 11      | IP: 34   | AR: 33   | PS: 001 | DR: 12      | mem[AR] 0       | CR: dec          |
+  TICK:   30 | AC 11      | IP: 35   | AR: 14   | PS: 001 | DR: 11      | mem[AR] 11      | CR: store 14     |
+  TICK:   33 | AC 11      | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:   36 | AC 11      | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:   39 | AC 1       | IP: 28   | AR: 13   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 13      |
+  TICK:   41 | AC 2       | IP: 29   | AR: 28   | PS: 000 | DR: 1       | mem[AR] 0       | CR: inc          |
+  TICK:   44 | AC 2       | IP: 30   | AR: 13   | PS: 000 | DR: 2       | mem[AR] 2       | CR: store 13     |
+  TICK:   48 | AC 101     | IP: 31   | AR: 2    | PS: 000 | DR: 101     | mem[AR] 101     | CR: load 13      |
+  OUTPUT e
+  TICK:   52 | AC 101     | IP: 32   | AR: 2047 | PS: 000 | DR: 101     | mem[AR] 101     | CR: store 15     |
+  TICK:   55 | AC 11      | IP: 33   | AR: 14   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 14      |
+  TICK:   57 | AC 10      | IP: 34   | AR: 33   | PS: 001 | DR: 11      | mem[AR] 0       | CR: dec          |
+  TICK:   60 | AC 10      | IP: 35   | AR: 14   | PS: 001 | DR: 10      | mem[AR] 10      | CR: store 14     |
+  TICK:   63 | AC 10      | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:   66 | AC 10      | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:   69 | AC 2       | IP: 28   | AR: 13   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 13      |
+  TICK:   71 | AC 3       | IP: 29   | AR: 28   | PS: 000 | DR: 2       | mem[AR] 0       | CR: inc          |
+  TICK:   74 | AC 3       | IP: 30   | AR: 13   | PS: 000 | DR: 3       | mem[AR] 3       | CR: store 13     |
+  TICK:   78 | AC 108     | IP: 31   | AR: 3    | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 13      |
+  OUTPUT l
+  TICK:   82 | AC 108     | IP: 32   | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 15     |
+  TICK:   85 | AC 10      | IP: 33   | AR: 14   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 14      |
+  TICK:   87 | AC 9       | IP: 34   | AR: 33   | PS: 001 | DR: 10      | mem[AR] 0       | CR: dec          |
+  TICK:   90 | AC 9       | IP: 35   | AR: 14   | PS: 001 | DR: 9       | mem[AR] 9       | CR: store 14     |
+  TICK:   93 | AC 9       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:   96 | AC 9       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:   99 | AC 3       | IP: 28   | AR: 13   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 13      |
+  TICK:  101 | AC 4       | IP: 29   | AR: 28   | PS: 000 | DR: 3       | mem[AR] 0       | CR: inc          |
+  TICK:  104 | AC 4       | IP: 30   | AR: 13   | PS: 000 | DR: 4       | mem[AR] 4       | CR: store 13     |
+  TICK:  108 | AC 108     | IP: 31   | AR: 4    | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 13      |
+  OUTPUT l
+  TICK:  112 | AC 108     | IP: 32   | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 15     |
+  TICK:  115 | AC 9       | IP: 33   | AR: 14   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 14      |
+  TICK:  117 | AC 8       | IP: 34   | AR: 33   | PS: 001 | DR: 9       | mem[AR] 0       | CR: dec          |
+  TICK:  120 | AC 8       | IP: 35   | AR: 14   | PS: 001 | DR: 8       | mem[AR] 8       | CR: store 14     |
+  TICK:  123 | AC 8       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  126 | AC 8       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  129 | AC 4       | IP: 28   | AR: 13   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 13      |
+  TICK:  131 | AC 5       | IP: 29   | AR: 28   | PS: 000 | DR: 4       | mem[AR] 0       | CR: inc          |
+  TICK:  134 | AC 5       | IP: 30   | AR: 13   | PS: 000 | DR: 5       | mem[AR] 5       | CR: store 13     |
+  TICK:  138 | AC 111     | IP: 31   | AR: 5    | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 13      |
+  OUTPUT o
+  TICK:  142 | AC 111     | IP: 32   | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 15     |
+  TICK:  145 | AC 8       | IP: 33   | AR: 14   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 14      |
+  TICK:  147 | AC 7       | IP: 34   | AR: 33   | PS: 001 | DR: 8       | mem[AR] 0       | CR: dec          |
+  TICK:  150 | AC 7       | IP: 35   | AR: 14   | PS: 001 | DR: 7       | mem[AR] 7       | CR: store 14     |
+  TICK:  153 | AC 7       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  156 | AC 7       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  159 | AC 5       | IP: 28   | AR: 13   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 13      |
+  TICK:  161 | AC 6       | IP: 29   | AR: 28   | PS: 000 | DR: 5       | mem[AR] 0       | CR: inc          |
+  TICK:  164 | AC 6       | IP: 30   | AR: 13   | PS: 000 | DR: 6       | mem[AR] 6       | CR: store 13     |
+  TICK:  168 | AC 32      | IP: 31   | AR: 6    | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 13      |
+  OUTPUT  
+  TICK:  172 | AC 32      | IP: 32   | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 15     |
+  TICK:  175 | AC 7       | IP: 33   | AR: 14   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 14      |
+  TICK:  177 | AC 6       | IP: 34   | AR: 33   | PS: 001 | DR: 7       | mem[AR] 0       | CR: dec          |
+  TICK:  180 | AC 6       | IP: 35   | AR: 14   | PS: 001 | DR: 6       | mem[AR] 6       | CR: store 14     |
+  TICK:  183 | AC 6       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  186 | AC 6       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  189 | AC 6       | IP: 28   | AR: 13   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 13      |
+  TICK:  191 | AC 7       | IP: 29   | AR: 28   | PS: 000 | DR: 6       | mem[AR] 0       | CR: inc          |
+  TICK:  194 | AC 7       | IP: 30   | AR: 13   | PS: 000 | DR: 7       | mem[AR] 7       | CR: store 13     |
+  TICK:  198 | AC 119     | IP: 31   | AR: 7    | PS: 000 | DR: 119     | mem[AR] 119     | CR: load 13      |
+  OUTPUT w
+  TICK:  202 | AC 119     | IP: 32   | AR: 2047 | PS: 000 | DR: 119     | mem[AR] 119     | CR: store 15     |
+  TICK:  205 | AC 6       | IP: 33   | AR: 14   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 14      |
+  TICK:  207 | AC 5       | IP: 34   | AR: 33   | PS: 001 | DR: 6       | mem[AR] 0       | CR: dec          |
+  TICK:  210 | AC 5       | IP: 35   | AR: 14   | PS: 001 | DR: 5       | mem[AR] 5       | CR: store 14     |
+  TICK:  213 | AC 5       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  216 | AC 5       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  219 | AC 7       | IP: 28   | AR: 13   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 13      |
+  TICK:  221 | AC 8       | IP: 29   | AR: 28   | PS: 000 | DR: 7       | mem[AR] 0       | CR: inc          |
+  TICK:  224 | AC 8       | IP: 30   | AR: 13   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 13     |
+  TICK:  228 | AC 111     | IP: 31   | AR: 8    | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 13      |
+  OUTPUT o
+  TICK:  232 | AC 111     | IP: 32   | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 15     |
+  TICK:  235 | AC 5       | IP: 33   | AR: 14   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 14      |
+  TICK:  237 | AC 4       | IP: 34   | AR: 33   | PS: 001 | DR: 5       | mem[AR] 0       | CR: dec          |
+  TICK:  240 | AC 4       | IP: 35   | AR: 14   | PS: 001 | DR: 4       | mem[AR] 4       | CR: store 14     |
+  TICK:  243 | AC 4       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  246 | AC 4       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  249 | AC 8       | IP: 28   | AR: 13   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 13      |
+  TICK:  251 | AC 9       | IP: 29   | AR: 28   | PS: 000 | DR: 8       | mem[AR] 0       | CR: inc          |
+  TICK:  254 | AC 9       | IP: 30   | AR: 13   | PS: 000 | DR: 9       | mem[AR] 9       | CR: store 13     |
+  TICK:  258 | AC 114     | IP: 31   | AR: 9    | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 13      |
+  OUTPUT r
+  TICK:  262 | AC 114     | IP: 32   | AR: 2047 | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 15     |
+  TICK:  265 | AC 4       | IP: 33   | AR: 14   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 14      |
+  TICK:  267 | AC 3       | IP: 34   | AR: 33   | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
+  TICK:  270 | AC 3       | IP: 35   | AR: 14   | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 14     |
+  TICK:  273 | AC 3       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  276 | AC 3       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  279 | AC 9       | IP: 28   | AR: 13   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 13      |
+  TICK:  281 | AC 10      | IP: 29   | AR: 28   | PS: 000 | DR: 9       | mem[AR] 0       | CR: inc          |
+  TICK:  284 | AC 10      | IP: 30   | AR: 13   | PS: 000 | DR: 10      | mem[AR] 10      | CR: store 13     |
+  TICK:  288 | AC 108     | IP: 31   | AR: 10   | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 13      |
+  OUTPUT l
+  TICK:  292 | AC 108     | IP: 32   | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 15     |
+  TICK:  295 | AC 3       | IP: 33   | AR: 14   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 14      |
+  TICK:  297 | AC 2       | IP: 34   | AR: 33   | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
+  TICK:  300 | AC 2       | IP: 35   | AR: 14   | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 14     |
+  TICK:  303 | AC 2       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  306 | AC 2       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  309 | AC 10      | IP: 28   | AR: 13   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 13      |
+  TICK:  311 | AC 11      | IP: 29   | AR: 28   | PS: 000 | DR: 10      | mem[AR] 0       | CR: inc          |
+  TICK:  314 | AC 11      | IP: 30   | AR: 13   | PS: 000 | DR: 11      | mem[AR] 11      | CR: store 13     |
+  TICK:  318 | AC 100     | IP: 31   | AR: 11   | PS: 000 | DR: 100     | mem[AR] 100     | CR: load 13      |
+  OUTPUT d
+  TICK:  322 | AC 100     | IP: 32   | AR: 2047 | PS: 000 | DR: 100     | mem[AR] 100     | CR: store 15     |
+  TICK:  325 | AC 2       | IP: 33   | AR: 14   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 14      |
+  TICK:  327 | AC 1       | IP: 34   | AR: 33   | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
+  TICK:  330 | AC 1       | IP: 35   | AR: 14   | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 14     |
+  TICK:  333 | AC 1       | IP: 36   | AR: 37   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  336 | AC 1       | IP: 27   | AR: 27   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 27       |
+  TICK:  339 | AC 11      | IP: 28   | AR: 13   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 13      |
+  TICK:  341 | AC 12      | IP: 29   | AR: 28   | PS: 000 | DR: 11      | mem[AR] 0       | CR: inc          |
+  TICK:  344 | AC 12      | IP: 30   | AR: 13   | PS: 000 | DR: 12      | mem[AR] 12      | CR: store 13     |
+  TICK:  348 | AC 33      | IP: 31   | AR: 12   | PS: 000 | DR: 33      | mem[AR] 33      | CR: load 13      |
+  OUTPUT !
+  TICK:  352 | AC 33      | IP: 32   | AR: 2047 | PS: 000 | DR: 33      | mem[AR] 33      | CR: store 15     |
+  TICK:  355 | AC 1       | IP: 33   | AR: 14   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 14      |
+  TICK:  357 | AC 0       | IP: 34   | AR: 33   | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
+  TICK:  360 | AC 0       | IP: 35   | AR: 14   | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 14     |
+  TICK:  363 | AC 0       | IP: 37   | AR: 37   | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 37       |
+  TICK:  365 | AC 0       | IP: 38   | AR: 37   | PS: 011 | DR: 0       | mem[AR] 0       | CR: hlt          |
+
   
   

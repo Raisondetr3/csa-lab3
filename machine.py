@@ -4,6 +4,14 @@ import sys
 
 from isa import *
 
+logger = logging.getLogger("machine_logger")
+logger.setLevel(logging.INFO)
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(message)s")
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
 class ALU:
     def __init__(self):
         self.left = 0
@@ -107,10 +115,10 @@ class DataPath:
         if self.registers["AR"] == OUTPUT_MAP:
             if isinstance(self.registers["DR"], int) and 0 <= self.registers["DR"] <= 0x10FFFF:
                 self.output_buffer.append(chr(self.registers["DR"]))
-                logging.debug("OUTPUT " + str(self.output_buffer[-1]))
+                logger.info("OUTPUT " + str(self.output_buffer[-1]))
             else:
                 self.output_buffer.append(self.registers["DR"])
-                logging.debug("OUTPUT " + str(self.output_buffer[-1]))
+                logger.info("OUTPUT " + str(self.output_buffer[-1]))
 
 
 
@@ -119,7 +127,7 @@ class DataPath:
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
                 self.registers["DR"] = ord(self.input_buffer.pop(0))
-                logging.debug("INPUT " + chr(self.registers["DR"]))
+                logger.info("INPUT " + chr(self.registers["DR"]))
 
 class ControlUnit:
     def __init__(self, program, data_path, start_address, limit):
@@ -174,7 +182,7 @@ class ControlUnit:
             self.instr_counter += 1
             self.__print__()
         if self.instr_counter >= self.limit:
-            logging.warning("Limit exceeded!")
+            logger.warning("Limit exceeded!")
 
     def decode_and_execute_instruction(self):
         self.sig_latch_reg("AR", self.calc(0, self.get_reg("IP"), "add"))  # IP -> AR
@@ -265,7 +273,7 @@ class ControlUnit:
             self.get_reg("CR")["opcode"]
             + (lambda x: " " + str(x["operand"]) if "operand" in x.keys() else "")(self.get_reg("CR")),
         )
-        logging.debug(state_repr)
+        logger.info(state_repr)
 
 
 def simulation(code, limit, input_data, start_addr):
@@ -293,7 +301,6 @@ def main(code, input_f):
 
 
 if __name__ == "__main__":
-    logging.getLogger().setLevel(logging.DEBUG)
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
     main(code_file, input_file)
