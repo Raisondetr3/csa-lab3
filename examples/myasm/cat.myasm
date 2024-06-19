@@ -9,13 +9,13 @@ start: load stop_input   ; spin-loop cycle
        jmz loop
        hlt
 
-loop:   load (in)               ; read symbol
-        cmp line_end            ; check if it is the end of the line
-        jmnz print_char         ; If not end-of-line, go to print character
-        load stop_input         ; If end-of-line, set stop_input flag
-        inc
-        store stop_input
-        jmp start
+       loop:   load (in)               ; read symbol
+               cmp line_end            ; check if it is the end of the line
+               jmnz print_char         ; If not end-of-line, go to print character
+               load stop_input         ; If end-of-line, set stop_input flag
+               inc
+               store stop_input
+               jmp start
 
-print_char: store (out)         ; Output symbol to output
-            jmp start          ; Go back to the loop to check next character
+       print_char: store (out)         ; Output symbol to output
+                   jmp start          ; Go back to the loop to check next character

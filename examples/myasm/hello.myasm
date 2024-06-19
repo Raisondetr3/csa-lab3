@@ -8,15 +8,15 @@ org 25
 start: load hello
        store cnt
 
-loop:  load addr
-       inc
-       store addr
-       load (addr)
-       store (out)
-       load cnt
-       dec
-       store cnt
-       jmz end
-       jmp loop
+       loop:  load addr
+              inc
+              store addr
+              load (addr)
+              store (out)
+              load cnt
+              dec
+              store cnt
+              jmz end
+              jmp loop
 
- end:   hlt
+       end:   hlt
