@@ -115,16 +115,12 @@ class DataPath:
             self.output_buffer.append(chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"])
             logger.info("OUTPUT " + str(self.output_buffer[-1]))
 
-    def rd(self, instr_counter, current_tick):
+    def rd(self):
         self.registers["DR"] = self.memory[self.registers["AR"]]["value"]
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
                 self.registers["DR"] = ord(self.input_buffer.pop(0))
                 logger.info("INPUT " + chr(self.registers["DR"]))
-            else:
-                logger.warning("Input_buffer is empty!")
-                # print(f"OUTPUT: {''.join(self.output_buffer)}\nInstruction number: {instr_counter}\nTicks: {current_tick}")
-                # sys.exit()
 
 class ControlUnit:
     def __init__(self, program, data_path, start_address, limit):
