@@ -57,7 +57,7 @@ out_code: |
   {'index': 37, 'opcode': 'hlt', 'value': 0}]
 
 out_stdout: |
-  source LoC: 23 code instr: 29
+  source LoC: 22 code instr: 29
   ============================================================
   Output: Hello world!
   Instruction number: 121
