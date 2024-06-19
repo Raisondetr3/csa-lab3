@@ -16,12 +16,6 @@ exclamation_addr: word: exclamation
 print_cnt: word: 0
 print_addr: word: 0
 print_str: word: 0
-user_name_start: word: user_name
-user_name_address: word: user_name
-user_name_len: word: 0
-
-org 50
-user_name: word: 30       ; Allocate 30 words for the username
 
 org 100
 start: load question
@@ -32,16 +26,32 @@ start: load question
 
 print_loop: load print_str
             store print_cnt
-loop:       load print_addr
-            inc
-            store print_addr
-            load (print_addr)
-            store (out)
-            load print_cnt
-            dec
-            store print_cnt
-            jmz check_next
-            jmp loop
+            loop: load print_addr
+                  inc
+                  store print_addr
+                  load (print_addr)
+                  store (out)
+                  load print_cnt
+                  dec
+                  store print_cnt
+                  jmz check_next
+                  jmp loop
+
+print_name_loop: load print_str
+                 store print_cnt
+                 name_loop: load print_addr
+                       inc
+                       store print_addr
+                       load (print_addr)
+                       store (out)
+                       load print_cnt
+                       dec
+                       store print_cnt
+                       load user_name_len
+                       dec
+                       store user_name_len
+                       jmz exclamation_print
+                       jmp name_loop
 
 check_next: load stop_input
             jmz enter_name_loop
@@ -60,12 +70,12 @@ save_symb: store tmp
            store print_addr
            load tmp
            store (print_addr)
-           load user_name_len
-           inc
-           store user_name_len
            load user_name_address
            inc
            store user_name_address
+           load user_name_len
+           inc
+           store user_name_len
            jmp enter_name_loop
 
 greeting_print: load greeting
@@ -74,13 +84,12 @@ greeting_print: load greeting
                 store print_addr
                 jmp print_loop
 
-name_print: load user_name_start
+name_print: load user_name
             store print_str
-            load user_name_len
-            store print_cnt
             load user_name_start
+            dec
             store print_addr
-            jmp print_loop
+            jmp print_name_loop
 
 exclamation_print: load exclamation
                    store print_str
@@ -91,3 +100,8 @@ exclamation_print: load exclamation
 end: hlt
 
 tmp: word: 0
+
+user_name_start: word: user_name
+user_name_address: word: user_name
+user_name: word: 0
+user_name_len: word: 0
