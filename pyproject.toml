@@ -24,6 +24,9 @@ build-backend = "poetry.core.masonry.api"
 enable_assertion_pass_hook = true
 addopts = "--doctest-modules"
 log_format = "%(levelname)-7s %(module)s:%(funcName)-13s %(message)s"
+markers = [
+    "golden_test: mark test as a golden test",
+]
 
 [tool.ruff]
 line-length = 120
