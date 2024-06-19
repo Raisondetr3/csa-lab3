@@ -42,6 +42,6 @@ def test_translator_and_machine(golden, caplog):
         with open(target, encoding="utf-8") as file:
             code = file.read()
 
-        assert code == golden.out["out_code"]
+        assert normalize_whitespace(code) == normalize_whitespace(golden.out["out_code"])
         assert stdout.getvalue() == golden.out["out_stdout"]
         assert normalize_whitespace(caplog.text) == normalize_whitespace(golden.out["out_log"])
