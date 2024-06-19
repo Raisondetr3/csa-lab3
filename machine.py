@@ -101,6 +101,7 @@ class DataPath:
         self.registers["PS"] = 2  # self.Z = 1
         self.output_buffer = []
         self.input_buffer = input_buffer
+        self.ignoreBuffer = False
 
     def get_reg(self, reg):
         return self.registers[reg]
@@ -110,27 +111,20 @@ class DataPath:
 
     def wr(self):
         self.memory[self.registers["AR"]] = {"value": self.registers["DR"]}
-        if isinstance(self.registers["DR"], int):
-            print(f"DEBUG: Writing to memory {chr(self.registers['DR'])} at address {self.registers['AR']}")
-        else:
-            print(f"DEBUG: Writing to memory {self.registers['DR']} at address {self.registers['AR']}")
         if self.registers["AR"] == OUTPUT_MAP:
-            char_to_output = chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"]
-            self.output_buffer.append(char_to_output)
+            self.output_buffer.append(chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"])
             logger.info("OUTPUT " + str(self.output_buffer[-1]))
-
 
     def rd(self, instr_counter, current_tick):
         self.registers["DR"] = self.memory[self.registers["AR"]]["value"]
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
-                self.registers["DR"] = self.input_buffer.pop(0)
-                logger.info("INPUT " + str(self.registers["DR"]))
+                self.registers["DR"] = ord(self.input_buffer.pop(0))
+                logger.info("INPUT " + chr(self.registers["DR"]))
             else:
                 logger.warning("Input_buffer is empty!")
-                print(f"Output: {''.join(self.output_buffer)}\nInstruction number: {instr_counter}\nTicks: {current_tick - 1}")
-                sys.exit(1)
-
+                # print(f"OUTPUT: {''.join(self.output_buffer)}\nInstruction number: {instr_counter}\nTicks: {current_tick}")
+                # sys.exit()
 
 class ControlUnit:
     def __init__(self, program, data_path, start_address, limit):
@@ -193,6 +187,10 @@ class ControlUnit:
         self.sig_latch_reg("CR", self.data_path.memory[self.get_reg("AR")])
         instr = self.get_reg("CR")
 
+        if "opcode" not in instr.keys():
+            print(f"Error: No opcode found in instruction at memory location {self.get_reg('AR')}")
+            return False
+
         opcode = instr["opcode"]
 
         self.tick()
@@ -200,7 +198,6 @@ class ControlUnit:
         if "opcode" not in instr.keys():
             return False
 
-        cycle = "exec.f: "
         # адресная команда
         if "operand" in instr.keys():
             # в DR лежит адрес операнда или адрес адреса операнда
@@ -257,7 +254,7 @@ class ControlUnit:
                 # унарная арифметическая операция
                 self.sig_latch_reg("AC", self.calc(self.get_reg("AC"), None, opcode, True))
                 self.tick()
-        return True  # executed successfully
+        return True
 
     def __print_symb__(self, text):
         return str((lambda x: ord(x) if isinstance(x, str) else x)(text))
@@ -270,7 +267,7 @@ class ControlUnit:
             self.__print_symb__(self.get_reg("AC")),
             str(self.get_reg("IP")),
             str(self.get_reg("AR")),
-            str(bin(self.get_reg("PS"))[2:].zfill(5)),
+            str(bin(self.get_reg("PS"))[2:].zfill(3)),
             self.__print_symb__(self.get_reg("DR")),
             self.__print_symb__(self.data_path.memory[self.get_reg("AR")]["value"]),
             self.get_reg("CR")["opcode"]
@@ -289,7 +286,7 @@ def simulation(code, limit, input_data, start_addr):
 def main(code, input_f):
     with open(input_f, encoding="utf-8") as file:
         input_text = file.read()
-        input_token = list(input_text)  # Use list of characters directly
+        input_token = list(input_text)
 
     start_addr, code = read_code(code)
     output, instr_num, ticks = simulation(
