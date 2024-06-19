@@ -233,454 +233,454 @@ out_code: |-
   {'index': 174, 'value': 175, 'opcode': 'nop'},
   {'index': 175, 'value': 0, 'opcode': 'nop'}]
 out_stdout: |
-  source LoC: 112 code instr: 117
+  source LoC: 111 code instr: 117
   ============================================================
   What is your name? Hello, Igor!
   instr_counter: 409 ticks: 1225
 
 out_log: |
-  DEBUG    TICK:    3 | AC 18      | IP: 101  | AR: 6    | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 6       |
-  DEBUG    TICK:    6 | AC 18      | IP: 102  | AR: 41   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 41     |
-  DEBUG    TICK:    9 | AC 6       | IP: 103  | AR: 25   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 25      |
-  DEBUG    TICK:   12 | AC 6       | IP: 104  | AR: 40   | PS: 000 | DR: 6       | mem[AR] 6       | CR: store 40     |
-  DEBUG    TICK:   15 | AC 6       | IP: 105  | AR: 105  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 105      |
-  DEBUG    TICK:   18 | AC 18      | IP: 106  | AR: 41   | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 41      |
-  DEBUG    TICK:   21 | AC 18      | IP: 107  | AR: 39   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 39     |
-  DEBUG    TICK:   24 | AC 6       | IP: 108  | AR: 40   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 40      |
-  DEBUG    TICK:   26 | AC 7       | IP: 109  | AR: 108  | PS: 000 | DR: 6       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:   29 | AC 7       | IP: 110  | AR: 40   | PS: 000 | DR: 7       | mem[AR] 7       | CR: store 40     |
-  DEBUG    TICK:   33 | AC 87      | IP: 111  | AR: 7    | PS: 000 | DR: 87      | mem[AR] 87      | CR: load 40      |
-  DEBUG    OUTPUT W
-  DEBUG    TICK:   37 | AC 87      | IP: 112  | AR: 2047 | PS: 000 | DR: 87      | mem[AR] 87      | CR: store 5      |
-  DEBUG    TICK:   40 | AC 18      | IP: 113  | AR: 39   | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 39      |
-  DEBUG    TICK:   42 | AC 17      | IP: 114  | AR: 113  | PS: 001 | DR: 18      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:   45 | AC 17      | IP: 115  | AR: 39   | PS: 001 | DR: 17      | mem[AR] 17      | CR: store 39     |
-  DEBUG    TICK:   48 | AC 17      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:   51 | AC 17      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:   54 | AC 7       | IP: 108  | AR: 40   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 40      |
-  DEBUG    TICK:   56 | AC 8       | IP: 109  | AR: 108  | PS: 000 | DR: 7       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:   59 | AC 8       | IP: 110  | AR: 40   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 40     |
-  DEBUG    TICK:   63 | AC 104     | IP: 111  | AR: 8    | PS: 000 | DR: 104     | mem[AR] 104     | CR: load 40      |
-  DEBUG    OUTPUT h
-  DEBUG    TICK:   67 | AC 104     | IP: 112  | AR: 2047 | PS: 000 | DR: 104     | mem[AR] 104     | CR: store 5      |
-  DEBUG    TICK:   70 | AC 17      | IP: 113  | AR: 39   | PS: 000 | DR: 17      | mem[AR] 17      | CR: load 39      |
-  DEBUG    TICK:   72 | AC 16      | IP: 114  | AR: 113  | PS: 001 | DR: 17      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:   75 | AC 16      | IP: 115  | AR: 39   | PS: 001 | DR: 16      | mem[AR] 16      | CR: store 39     |
-  DEBUG    TICK:   78 | AC 16      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:   81 | AC 16      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:   84 | AC 8       | IP: 108  | AR: 40   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 40      |
-  DEBUG    TICK:   86 | AC 9       | IP: 109  | AR: 108  | PS: 000 | DR: 8       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:   89 | AC 9       | IP: 110  | AR: 40   | PS: 000 | DR: 9       | mem[AR] 9       | CR: store 40     |
-  DEBUG    TICK:   93 | AC 97      | IP: 111  | AR: 9    | PS: 000 | DR: 97      | mem[AR] 97      | CR: load 40      |
-  DEBUG    OUTPUT a
-  DEBUG    TICK:   97 | AC 97      | IP: 112  | AR: 2047 | PS: 000 | DR: 97      | mem[AR] 97      | CR: store 5      |
-  DEBUG    TICK:  100 | AC 16      | IP: 113  | AR: 39   | PS: 000 | DR: 16      | mem[AR] 16      | CR: load 39      |
-  DEBUG    TICK:  102 | AC 15      | IP: 114  | AR: 113  | PS: 001 | DR: 16      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  105 | AC 15      | IP: 115  | AR: 39   | PS: 001 | DR: 15      | mem[AR] 15      | CR: store 39     |
-  DEBUG    TICK:  108 | AC 15      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  111 | AC 15      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  114 | AC 9       | IP: 108  | AR: 40   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 40      |
-  DEBUG    TICK:  116 | AC 10      | IP: 109  | AR: 108  | PS: 000 | DR: 9       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  119 | AC 10      | IP: 110  | AR: 40   | PS: 000 | DR: 10      | mem[AR] 10      | CR: store 40     |
-  DEBUG    TICK:  123 | AC 116     | IP: 111  | AR: 10   | PS: 000 | DR: 116     | mem[AR] 116     | CR: load 40      |
-  DEBUG    OUTPUT t
-  DEBUG    TICK:  127 | AC 116     | IP: 112  | AR: 2047 | PS: 000 | DR: 116     | mem[AR] 116     | CR: store 5      |
-  DEBUG    TICK:  130 | AC 15      | IP: 113  | AR: 39   | PS: 000 | DR: 15      | mem[AR] 15      | CR: load 39      |
-  DEBUG    TICK:  132 | AC 14      | IP: 114  | AR: 113  | PS: 001 | DR: 15      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  135 | AC 14      | IP: 115  | AR: 39   | PS: 001 | DR: 14      | mem[AR] 14      | CR: store 39     |
-  DEBUG    TICK:  138 | AC 14      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  141 | AC 14      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  144 | AC 10      | IP: 108  | AR: 40   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 40      |
-  DEBUG    TICK:  146 | AC 11      | IP: 109  | AR: 108  | PS: 000 | DR: 10      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  149 | AC 11      | IP: 110  | AR: 40   | PS: 000 | DR: 11      | mem[AR] 11      | CR: store 40     |
-  DEBUG    TICK:  153 | AC 32      | IP: 111  | AR: 11   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
-  DEBUG    OUTPUT  
-  DEBUG    TICK:  157 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
-  DEBUG    TICK:  160 | AC 14      | IP: 113  | AR: 39   | PS: 000 | DR: 14      | mem[AR] 14      | CR: load 39      |
-  DEBUG    TICK:  162 | AC 13      | IP: 114  | AR: 113  | PS: 001 | DR: 14      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  165 | AC 13      | IP: 115  | AR: 39   | PS: 001 | DR: 13      | mem[AR] 13      | CR: store 39     |
-  DEBUG    TICK:  168 | AC 13      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  171 | AC 13      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  174 | AC 11      | IP: 108  | AR: 40   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 40      |
-  DEBUG    TICK:  176 | AC 12      | IP: 109  | AR: 108  | PS: 000 | DR: 11      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  179 | AC 12      | IP: 110  | AR: 40   | PS: 000 | DR: 12      | mem[AR] 12      | CR: store 40     |
-  DEBUG    TICK:  183 | AC 105     | IP: 111  | AR: 12   | PS: 000 | DR: 105     | mem[AR] 105     | CR: load 40      |
-  DEBUG    OUTPUT i
-  DEBUG    TICK:  187 | AC 105     | IP: 112  | AR: 2047 | PS: 000 | DR: 105     | mem[AR] 105     | CR: store 5      |
-  DEBUG    TICK:  190 | AC 13      | IP: 113  | AR: 39   | PS: 000 | DR: 13      | mem[AR] 13      | CR: load 39      |
-  DEBUG    TICK:  192 | AC 12      | IP: 114  | AR: 113  | PS: 001 | DR: 13      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  195 | AC 12      | IP: 115  | AR: 39   | PS: 001 | DR: 12      | mem[AR] 12      | CR: store 39     |
-  DEBUG    TICK:  198 | AC 12      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  201 | AC 12      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  204 | AC 12      | IP: 108  | AR: 40   | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 40      |
-  DEBUG    TICK:  206 | AC 13      | IP: 109  | AR: 108  | PS: 000 | DR: 12      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  209 | AC 13      | IP: 110  | AR: 40   | PS: 000 | DR: 13      | mem[AR] 13      | CR: store 40     |
-  DEBUG    TICK:  213 | AC 115     | IP: 111  | AR: 13   | PS: 000 | DR: 115     | mem[AR] 115     | CR: load 40      |
-  DEBUG    OUTPUT s
-  DEBUG    TICK:  217 | AC 115     | IP: 112  | AR: 2047 | PS: 000 | DR: 115     | mem[AR] 115     | CR: store 5      |
-  DEBUG    TICK:  220 | AC 12      | IP: 113  | AR: 39   | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 39      |
-  DEBUG    TICK:  222 | AC 11      | IP: 114  | AR: 113  | PS: 001 | DR: 12      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  225 | AC 11      | IP: 115  | AR: 39   | PS: 001 | DR: 11      | mem[AR] 11      | CR: store 39     |
-  DEBUG    TICK:  228 | AC 11      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  231 | AC 11      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  234 | AC 13      | IP: 108  | AR: 40   | PS: 000 | DR: 13      | mem[AR] 13      | CR: load 40      |
-  DEBUG    TICK:  236 | AC 14      | IP: 109  | AR: 108  | PS: 000 | DR: 13      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  239 | AC 14      | IP: 110  | AR: 40   | PS: 000 | DR: 14      | mem[AR] 14      | CR: store 40     |
-  DEBUG    TICK:  243 | AC 32      | IP: 111  | AR: 14   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
-  DEBUG    OUTPUT  
-  DEBUG    TICK:  247 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
-  DEBUG    TICK:  250 | AC 11      | IP: 113  | AR: 39   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 39      |
-  DEBUG    TICK:  252 | AC 10      | IP: 114  | AR: 113  | PS: 001 | DR: 11      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  255 | AC 10      | IP: 115  | AR: 39   | PS: 001 | DR: 10      | mem[AR] 10      | CR: store 39     |
-  DEBUG    TICK:  258 | AC 10      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  261 | AC 10      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  264 | AC 14      | IP: 108  | AR: 40   | PS: 000 | DR: 14      | mem[AR] 14      | CR: load 40      |
-  DEBUG    TICK:  266 | AC 15      | IP: 109  | AR: 108  | PS: 000 | DR: 14      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  269 | AC 15      | IP: 110  | AR: 40   | PS: 000 | DR: 15      | mem[AR] 15      | CR: store 40     |
-  DEBUG    TICK:  273 | AC 121     | IP: 111  | AR: 15   | PS: 000 | DR: 121     | mem[AR] 121     | CR: load 40      |
-  DEBUG    OUTPUT y
-  DEBUG    TICK:  277 | AC 121     | IP: 112  | AR: 2047 | PS: 000 | DR: 121     | mem[AR] 121     | CR: store 5      |
-  DEBUG    TICK:  280 | AC 10      | IP: 113  | AR: 39   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 39      |
-  DEBUG    TICK:  282 | AC 9       | IP: 114  | AR: 113  | PS: 001 | DR: 10      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  285 | AC 9       | IP: 115  | AR: 39   | PS: 001 | DR: 9       | mem[AR] 9       | CR: store 39     |
-  DEBUG    TICK:  288 | AC 9       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  291 | AC 9       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  294 | AC 15      | IP: 108  | AR: 40   | PS: 000 | DR: 15      | mem[AR] 15      | CR: load 40      |
-  DEBUG    TICK:  296 | AC 16      | IP: 109  | AR: 108  | PS: 000 | DR: 15      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  299 | AC 16      | IP: 110  | AR: 40   | PS: 000 | DR: 16      | mem[AR] 16      | CR: store 40     |
-  DEBUG    TICK:  303 | AC 111     | IP: 111  | AR: 16   | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 40      |
-  DEBUG    OUTPUT o
-  DEBUG    TICK:  307 | AC 111     | IP: 112  | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 5      |
-  DEBUG    TICK:  310 | AC 9       | IP: 113  | AR: 39   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 39      |
-  DEBUG    TICK:  312 | AC 8       | IP: 114  | AR: 113  | PS: 001 | DR: 9       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  315 | AC 8       | IP: 115  | AR: 39   | PS: 001 | DR: 8       | mem[AR] 8       | CR: store 39     |
-  DEBUG    TICK:  318 | AC 8       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  321 | AC 8       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  324 | AC 16      | IP: 108  | AR: 40   | PS: 000 | DR: 16      | mem[AR] 16      | CR: load 40      |
-  DEBUG    TICK:  326 | AC 17      | IP: 109  | AR: 108  | PS: 000 | DR: 16      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  329 | AC 17      | IP: 110  | AR: 40   | PS: 000 | DR: 17      | mem[AR] 17      | CR: store 40     |
-  DEBUG    TICK:  333 | AC 117     | IP: 111  | AR: 17   | PS: 000 | DR: 117     | mem[AR] 117     | CR: load 40      |
-  DEBUG    OUTPUT u
-  DEBUG    TICK:  337 | AC 117     | IP: 112  | AR: 2047 | PS: 000 | DR: 117     | mem[AR] 117     | CR: store 5      |
-  DEBUG    TICK:  340 | AC 8       | IP: 113  | AR: 39   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 39      |
-  DEBUG    TICK:  342 | AC 7       | IP: 114  | AR: 113  | PS: 001 | DR: 8       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  345 | AC 7       | IP: 115  | AR: 39   | PS: 001 | DR: 7       | mem[AR] 7       | CR: store 39     |
-  DEBUG    TICK:  348 | AC 7       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  351 | AC 7       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  354 | AC 17      | IP: 108  | AR: 40   | PS: 000 | DR: 17      | mem[AR] 17      | CR: load 40      |
-  DEBUG    TICK:  356 | AC 18      | IP: 109  | AR: 108  | PS: 000 | DR: 17      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  359 | AC 18      | IP: 110  | AR: 40   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 40     |
-  DEBUG    TICK:  363 | AC 114     | IP: 111  | AR: 18   | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 40      |
-  DEBUG    OUTPUT r
-  DEBUG    TICK:  367 | AC 114     | IP: 112  | AR: 2047 | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 5      |
-  DEBUG    TICK:  370 | AC 7       | IP: 113  | AR: 39   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 39      |
-  DEBUG    TICK:  372 | AC 6       | IP: 114  | AR: 113  | PS: 001 | DR: 7       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  375 | AC 6       | IP: 115  | AR: 39   | PS: 001 | DR: 6       | mem[AR] 6       | CR: store 39     |
-  DEBUG    TICK:  378 | AC 6       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  381 | AC 6       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  384 | AC 18      | IP: 108  | AR: 40   | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 40      |
-  DEBUG    TICK:  386 | AC 19      | IP: 109  | AR: 108  | PS: 000 | DR: 18      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  389 | AC 19      | IP: 110  | AR: 40   | PS: 000 | DR: 19      | mem[AR] 19      | CR: store 40     |
-  DEBUG    TICK:  393 | AC 32      | IP: 111  | AR: 19   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
-  DEBUG    OUTPUT  
-  DEBUG    TICK:  397 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
-  DEBUG    TICK:  400 | AC 6       | IP: 113  | AR: 39   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 39      |
-  DEBUG    TICK:  402 | AC 5       | IP: 114  | AR: 113  | PS: 001 | DR: 6       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  405 | AC 5       | IP: 115  | AR: 39   | PS: 001 | DR: 5       | mem[AR] 5       | CR: store 39     |
-  DEBUG    TICK:  408 | AC 5       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  411 | AC 5       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  414 | AC 19      | IP: 108  | AR: 40   | PS: 000 | DR: 19      | mem[AR] 19      | CR: load 40      |
-  DEBUG    TICK:  416 | AC 20      | IP: 109  | AR: 108  | PS: 000 | DR: 19      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  419 | AC 20      | IP: 110  | AR: 40   | PS: 000 | DR: 20      | mem[AR] 20      | CR: store 40     |
-  DEBUG    TICK:  423 | AC 110     | IP: 111  | AR: 20   | PS: 000 | DR: 110     | mem[AR] 110     | CR: load 40      |
-  DEBUG    OUTPUT n
-  DEBUG    TICK:  427 | AC 110     | IP: 112  | AR: 2047 | PS: 000 | DR: 110     | mem[AR] 110     | CR: store 5      |
-  DEBUG    TICK:  430 | AC 5       | IP: 113  | AR: 39   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 39      |
-  DEBUG    TICK:  432 | AC 4       | IP: 114  | AR: 113  | PS: 001 | DR: 5       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  435 | AC 4       | IP: 115  | AR: 39   | PS: 001 | DR: 4       | mem[AR] 4       | CR: store 39     |
-  DEBUG    TICK:  438 | AC 4       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  441 | AC 4       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  444 | AC 20      | IP: 108  | AR: 40   | PS: 000 | DR: 20      | mem[AR] 20      | CR: load 40      |
-  DEBUG    TICK:  446 | AC 21      | IP: 109  | AR: 108  | PS: 000 | DR: 20      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  449 | AC 21      | IP: 110  | AR: 40   | PS: 000 | DR: 21      | mem[AR] 21      | CR: store 40     |
-  DEBUG    TICK:  453 | AC 97      | IP: 111  | AR: 21   | PS: 000 | DR: 97      | mem[AR] 97      | CR: load 40      |
-  DEBUG    OUTPUT a
-  DEBUG    TICK:  457 | AC 97      | IP: 112  | AR: 2047 | PS: 000 | DR: 97      | mem[AR] 97      | CR: store 5      |
-  DEBUG    TICK:  460 | AC 4       | IP: 113  | AR: 39   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 39      |
-  DEBUG    TICK:  462 | AC 3       | IP: 114  | AR: 113  | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  465 | AC 3       | IP: 115  | AR: 39   | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 39     |
-  DEBUG    TICK:  468 | AC 3       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  471 | AC 3       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  474 | AC 21      | IP: 108  | AR: 40   | PS: 000 | DR: 21      | mem[AR] 21      | CR: load 40      |
-  DEBUG    TICK:  476 | AC 22      | IP: 109  | AR: 108  | PS: 000 | DR: 21      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  479 | AC 22      | IP: 110  | AR: 40   | PS: 000 | DR: 22      | mem[AR] 22      | CR: store 40     |
-  DEBUG    TICK:  483 | AC 109     | IP: 111  | AR: 22   | PS: 000 | DR: 109     | mem[AR] 109     | CR: load 40      |
-  DEBUG    OUTPUT m
-  DEBUG    TICK:  487 | AC 109     | IP: 112  | AR: 2047 | PS: 000 | DR: 109     | mem[AR] 109     | CR: store 5      |
-  DEBUG    TICK:  490 | AC 3       | IP: 113  | AR: 39   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 39      |
-  DEBUG    TICK:  492 | AC 2       | IP: 114  | AR: 113  | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  495 | AC 2       | IP: 115  | AR: 39   | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 39     |
-  DEBUG    TICK:  498 | AC 2       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  501 | AC 2       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  504 | AC 22      | IP: 108  | AR: 40   | PS: 000 | DR: 22      | mem[AR] 22      | CR: load 40      |
-  DEBUG    TICK:  506 | AC 23      | IP: 109  | AR: 108  | PS: 000 | DR: 22      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  509 | AC 23      | IP: 110  | AR: 40   | PS: 000 | DR: 23      | mem[AR] 23      | CR: store 40     |
-  DEBUG    TICK:  513 | AC 101     | IP: 111  | AR: 23   | PS: 000 | DR: 101     | mem[AR] 101     | CR: load 40      |
-  DEBUG    OUTPUT e
-  DEBUG    TICK:  517 | AC 101     | IP: 112  | AR: 2047 | PS: 000 | DR: 101     | mem[AR] 101     | CR: store 5      |
-  DEBUG    TICK:  520 | AC 2       | IP: 113  | AR: 39   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 39      |
-  DEBUG    TICK:  522 | AC 1       | IP: 114  | AR: 113  | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  525 | AC 1       | IP: 115  | AR: 39   | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 39     |
-  DEBUG    TICK:  528 | AC 1       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  531 | AC 1       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  534 | AC 23      | IP: 108  | AR: 40   | PS: 000 | DR: 23      | mem[AR] 23      | CR: load 40      |
-  DEBUG    TICK:  536 | AC 24      | IP: 109  | AR: 108  | PS: 000 | DR: 23      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  539 | AC 24      | IP: 110  | AR: 40   | PS: 000 | DR: 24      | mem[AR] 24      | CR: store 40     |
-  DEBUG    TICK:  543 | AC 63      | IP: 111  | AR: 24   | PS: 000 | DR: 63      | mem[AR] 63      | CR: load 40      |
-  DEBUG    OUTPUT ?
-  DEBUG    TICK:  547 | AC 63      | IP: 112  | AR: 2047 | PS: 000 | DR: 63      | mem[AR] 63      | CR: store 5      |
-  DEBUG    TICK:  550 | AC 1       | IP: 113  | AR: 39   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 39      |
-  DEBUG    TICK:  552 | AC 0       | IP: 114  | AR: 113  | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  555 | AC 0       | IP: 115  | AR: 39   | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 39     |
-  DEBUG    TICK:  558 | AC 0       | IP: 132  | AR: 132  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  561 | AC 0       | IP: 133  | AR: 3    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 3       |
-  DEBUG    TICK:  564 | AC 0       | IP: 135  | AR: 135  | PS: 010 | DR: 0       | mem[AR] 0       | CR: jmz 135      |
-  DEBUG    INPUT I
-  DEBUG    TICK:  568 | AC 73      | IP: 136  | AR: 2046 | PS: 000 | DR: 73      | mem[AR] 0       | CR: load 4       |
-  DEBUG    TICK:  571 | AC 73      | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
-  DEBUG    TICK:  574 | AC 73      | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
-  DEBUG    TICK:  577 | AC 73      | IP: 143  | AR: 172  | PS: 001 | DR: 73      | mem[AR] 73      | CR: store 172    |
-  DEBUG    TICK:  580 | AC 175     | IP: 144  | AR: 174  | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 174     |
-  DEBUG    TICK:  583 | AC 175     | IP: 145  | AR: 40   | PS: 000 | DR: 175     | mem[AR] 175     | CR: store 40     |
-  DEBUG    TICK:  586 | AC 73      | IP: 146  | AR: 172  | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 172     |
-  DEBUG    TICK:  590 | AC 73      | IP: 147  | AR: 175  | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 40     |
-  DEBUG    TICK:  593 | AC 175     | IP: 148  | AR: 174  | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 174     |
-  DEBUG    TICK:  595 | AC 176     | IP: 149  | AR: 148  | PS: 000 | DR: 175     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  598 | AC 176     | IP: 150  | AR: 174  | PS: 000 | DR: 176     | mem[AR] 176     | CR: store 174    |
-  DEBUG    TICK:  601 | AC 0       | IP: 151  | AR: 0    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 0       |
-  DEBUG    TICK:  603 | AC 1       | IP: 152  | AR: 151  | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  606 | AC 1       | IP: 153  | AR: 0    | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 0      |
-  DEBUG    TICK:  609 | AC 1       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
-  DEBUG    INPUT g
-  DEBUG    TICK:  613 | AC 103     | IP: 136  | AR: 2046 | PS: 000 | DR: 103     | mem[AR] 0       | CR: load 4       |
-  DEBUG    TICK:  616 | AC 103     | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
-  DEBUG    TICK:  619 | AC 103     | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
-  DEBUG    TICK:  622 | AC 103     | IP: 143  | AR: 172  | PS: 001 | DR: 103     | mem[AR] 103     | CR: store 172    |
-  DEBUG    TICK:  625 | AC 176     | IP: 144  | AR: 174  | PS: 000 | DR: 176     | mem[AR] 176     | CR: load 174     |
-  DEBUG    TICK:  628 | AC 176     | IP: 145  | AR: 40   | PS: 000 | DR: 176     | mem[AR] 176     | CR: store 40     |
-  DEBUG    TICK:  631 | AC 103     | IP: 146  | AR: 172  | PS: 000 | DR: 103     | mem[AR] 103     | CR: load 172     |
-  DEBUG    TICK:  635 | AC 103     | IP: 147  | AR: 176  | PS: 000 | DR: 103     | mem[AR] 103     | CR: store 40     |
-  DEBUG    TICK:  638 | AC 176     | IP: 148  | AR: 174  | PS: 000 | DR: 176     | mem[AR] 176     | CR: load 174     |
-  DEBUG    TICK:  640 | AC 177     | IP: 149  | AR: 148  | PS: 000 | DR: 176     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  643 | AC 177     | IP: 150  | AR: 174  | PS: 000 | DR: 177     | mem[AR] 177     | CR: store 174    |
-  DEBUG    TICK:  646 | AC 1       | IP: 151  | AR: 0    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 0       |
-  DEBUG    TICK:  648 | AC 2       | IP: 152  | AR: 151  | PS: 000 | DR: 1       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  651 | AC 2       | IP: 153  | AR: 0    | PS: 000 | DR: 2       | mem[AR] 2       | CR: store 0      |
-  DEBUG    TICK:  654 | AC 2       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
-  DEBUG    INPUT o
-  DEBUG    TICK:  658 | AC 111     | IP: 136  | AR: 2046 | PS: 000 | DR: 111     | mem[AR] 0       | CR: load 4       |
-  DEBUG    TICK:  661 | AC 111     | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
-  DEBUG    TICK:  664 | AC 111     | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
-  DEBUG    TICK:  667 | AC 111     | IP: 143  | AR: 172  | PS: 001 | DR: 111     | mem[AR] 111     | CR: store 172    |
-  DEBUG    TICK:  670 | AC 177     | IP: 144  | AR: 174  | PS: 000 | DR: 177     | mem[AR] 177     | CR: load 174     |
-  DEBUG    TICK:  673 | AC 177     | IP: 145  | AR: 40   | PS: 000 | DR: 177     | mem[AR] 177     | CR: store 40     |
-  DEBUG    TICK:  676 | AC 111     | IP: 146  | AR: 172  | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 172     |
-  DEBUG    TICK:  680 | AC 111     | IP: 147  | AR: 177  | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 40     |
-  DEBUG    TICK:  683 | AC 177     | IP: 148  | AR: 174  | PS: 000 | DR: 177     | mem[AR] 177     | CR: load 174     |
-  DEBUG    TICK:  685 | AC 178     | IP: 149  | AR: 148  | PS: 000 | DR: 177     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  688 | AC 178     | IP: 150  | AR: 174  | PS: 000 | DR: 178     | mem[AR] 178     | CR: store 174    |
-  DEBUG    TICK:  691 | AC 2       | IP: 151  | AR: 0    | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 0       |
-  DEBUG    TICK:  693 | AC 3       | IP: 152  | AR: 151  | PS: 000 | DR: 2       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  696 | AC 3       | IP: 153  | AR: 0    | PS: 000 | DR: 3       | mem[AR] 3       | CR: store 0      |
-  DEBUG    TICK:  699 | AC 3       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
-  DEBUG    INPUT r
-  DEBUG    TICK:  703 | AC 114     | IP: 136  | AR: 2046 | PS: 000 | DR: 114     | mem[AR] 0       | CR: load 4       |
-  DEBUG    TICK:  706 | AC 114     | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
-  DEBUG    TICK:  709 | AC 114     | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
-  DEBUG    TICK:  712 | AC 114     | IP: 143  | AR: 172  | PS: 001 | DR: 114     | mem[AR] 114     | CR: store 172    |
-  DEBUG    TICK:  715 | AC 178     | IP: 144  | AR: 174  | PS: 000 | DR: 178     | mem[AR] 178     | CR: load 174     |
-  DEBUG    TICK:  718 | AC 178     | IP: 145  | AR: 40   | PS: 000 | DR: 178     | mem[AR] 178     | CR: store 40     |
-  DEBUG    TICK:  721 | AC 114     | IP: 146  | AR: 172  | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 172     |
-  DEBUG    TICK:  725 | AC 114     | IP: 147  | AR: 178  | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 40     |
-  DEBUG    TICK:  728 | AC 178     | IP: 148  | AR: 174  | PS: 000 | DR: 178     | mem[AR] 178     | CR: load 174     |
-  DEBUG    TICK:  730 | AC 179     | IP: 149  | AR: 148  | PS: 000 | DR: 178     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  733 | AC 179     | IP: 150  | AR: 174  | PS: 000 | DR: 179     | mem[AR] 179     | CR: store 174    |
-  DEBUG    TICK:  736 | AC 3       | IP: 151  | AR: 0    | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 0       |
-  DEBUG    TICK:  738 | AC 4       | IP: 152  | AR: 151  | PS: 000 | DR: 3       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  741 | AC 4       | IP: 153  | AR: 0    | PS: 000 | DR: 4       | mem[AR] 4       | CR: store 0      |
-  DEBUG    TICK:  744 | AC 4       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
-  DEBUG    TICK:  748 | AC 0       | IP: 136  | AR: 2046 | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 4       |
-  DEBUG    TICK:  751 | AC 0       | IP: 137  | AR: 2    | PS: 011 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
-  DEBUG    TICK:  754 | AC 0       | IP: 138  | AR: 142  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
-  DEBUG    TICK:  757 | AC 0       | IP: 139  | AR: 3    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 3       |
-  DEBUG    TICK:  759 | AC 1       | IP: 140  | AR: 139  | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  762 | AC 1       | IP: 141  | AR: 3    | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 3      |
-  DEBUG    TICK:  765 | AC 1       | IP: 154  | AR: 154  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 154      |
-  DEBUG    TICK:  768 | AC 8       | IP: 155  | AR: 26   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 26      |
-  DEBUG    TICK:  771 | AC 8       | IP: 156  | AR: 41   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 41     |
-  DEBUG    TICK:  774 | AC 26      | IP: 157  | AR: 35   | PS: 000 | DR: 26      | mem[AR] 26      | CR: load 35      |
-  DEBUG    TICK:  777 | AC 26      | IP: 158  | AR: 40   | PS: 000 | DR: 26      | mem[AR] 26      | CR: store 40     |
-  DEBUG    TICK:  780 | AC 26      | IP: 105  | AR: 105  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 105      |
-  DEBUG    TICK:  783 | AC 8       | IP: 106  | AR: 41   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 41      |
-  DEBUG    TICK:  786 | AC 8       | IP: 107  | AR: 39   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 39     |
-  DEBUG    TICK:  789 | AC 26      | IP: 108  | AR: 40   | PS: 000 | DR: 26      | mem[AR] 26      | CR: load 40      |
-  DEBUG    TICK:  791 | AC 27      | IP: 109  | AR: 108  | PS: 000 | DR: 26      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  794 | AC 27      | IP: 110  | AR: 40   | PS: 000 | DR: 27      | mem[AR] 27      | CR: store 40     |
-  DEBUG    TICK:  798 | AC 32      | IP: 111  | AR: 27   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
-  DEBUG    OUTPUT  
-  DEBUG    TICK:  802 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
-  DEBUG    TICK:  805 | AC 8       | IP: 113  | AR: 39   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 39      |
-  DEBUG    TICK:  807 | AC 7       | IP: 114  | AR: 113  | PS: 001 | DR: 8       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  810 | AC 7       | IP: 115  | AR: 39   | PS: 001 | DR: 7       | mem[AR] 7       | CR: store 39     |
-  DEBUG    TICK:  813 | AC 7       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  816 | AC 7       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  819 | AC 27      | IP: 108  | AR: 40   | PS: 000 | DR: 27      | mem[AR] 27      | CR: load 40      |
-  DEBUG    TICK:  821 | AC 28      | IP: 109  | AR: 108  | PS: 000 | DR: 27      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  824 | AC 28      | IP: 110  | AR: 40   | PS: 000 | DR: 28      | mem[AR] 28      | CR: store 40     |
-  DEBUG    TICK:  828 | AC 72      | IP: 111  | AR: 28   | PS: 000 | DR: 72      | mem[AR] 72      | CR: load 40      |
-  DEBUG    OUTPUT H
-  DEBUG    TICK:  832 | AC 72      | IP: 112  | AR: 2047 | PS: 000 | DR: 72      | mem[AR] 72      | CR: store 5      |
-  DEBUG    TICK:  835 | AC 7       | IP: 113  | AR: 39   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 39      |
-  DEBUG    TICK:  837 | AC 6       | IP: 114  | AR: 113  | PS: 001 | DR: 7       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  840 | AC 6       | IP: 115  | AR: 39   | PS: 001 | DR: 6       | mem[AR] 6       | CR: store 39     |
-  DEBUG    TICK:  843 | AC 6       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  846 | AC 6       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  849 | AC 28      | IP: 108  | AR: 40   | PS: 000 | DR: 28      | mem[AR] 28      | CR: load 40      |
-  DEBUG    TICK:  851 | AC 29      | IP: 109  | AR: 108  | PS: 000 | DR: 28      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  854 | AC 29      | IP: 110  | AR: 40   | PS: 000 | DR: 29      | mem[AR] 29      | CR: store 40     |
-  DEBUG    TICK:  858 | AC 101     | IP: 111  | AR: 29   | PS: 000 | DR: 101     | mem[AR] 101     | CR: load 40      |
-  DEBUG    OUTPUT e
-  DEBUG    TICK:  862 | AC 101     | IP: 112  | AR: 2047 | PS: 000 | DR: 101     | mem[AR] 101     | CR: store 5      |
-  DEBUG    TICK:  865 | AC 6       | IP: 113  | AR: 39   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 39      |
-  DEBUG    TICK:  867 | AC 5       | IP: 114  | AR: 113  | PS: 001 | DR: 6       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  870 | AC 5       | IP: 115  | AR: 39   | PS: 001 | DR: 5       | mem[AR] 5       | CR: store 39     |
-  DEBUG    TICK:  873 | AC 5       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  876 | AC 5       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  879 | AC 29      | IP: 108  | AR: 40   | PS: 000 | DR: 29      | mem[AR] 29      | CR: load 40      |
-  DEBUG    TICK:  881 | AC 30      | IP: 109  | AR: 108  | PS: 000 | DR: 29      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  884 | AC 30      | IP: 110  | AR: 40   | PS: 000 | DR: 30      | mem[AR] 30      | CR: store 40     |
-  DEBUG    TICK:  888 | AC 108     | IP: 111  | AR: 30   | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 40      |
-  DEBUG    OUTPUT l
-  DEBUG    TICK:  892 | AC 108     | IP: 112  | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 5      |
-  DEBUG    TICK:  895 | AC 5       | IP: 113  | AR: 39   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 39      |
-  DEBUG    TICK:  897 | AC 4       | IP: 114  | AR: 113  | PS: 001 | DR: 5       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  900 | AC 4       | IP: 115  | AR: 39   | PS: 001 | DR: 4       | mem[AR] 4       | CR: store 39     |
-  DEBUG    TICK:  903 | AC 4       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  906 | AC 4       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  909 | AC 30      | IP: 108  | AR: 40   | PS: 000 | DR: 30      | mem[AR] 30      | CR: load 40      |
-  DEBUG    TICK:  911 | AC 31      | IP: 109  | AR: 108  | PS: 000 | DR: 30      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  914 | AC 31      | IP: 110  | AR: 40   | PS: 000 | DR: 31      | mem[AR] 31      | CR: store 40     |
-  DEBUG    TICK:  918 | AC 108     | IP: 111  | AR: 31   | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 40      |
-  DEBUG    OUTPUT l
-  DEBUG    TICK:  922 | AC 108     | IP: 112  | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 5      |
-  DEBUG    TICK:  925 | AC 4       | IP: 113  | AR: 39   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 39      |
-  DEBUG    TICK:  927 | AC 3       | IP: 114  | AR: 113  | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  930 | AC 3       | IP: 115  | AR: 39   | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 39     |
-  DEBUG    TICK:  933 | AC 3       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  936 | AC 3       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  939 | AC 31      | IP: 108  | AR: 40   | PS: 000 | DR: 31      | mem[AR] 31      | CR: load 40      |
-  DEBUG    TICK:  941 | AC 32      | IP: 109  | AR: 108  | PS: 000 | DR: 31      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  944 | AC 32      | IP: 110  | AR: 40   | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 40     |
-  DEBUG    TICK:  948 | AC 111     | IP: 111  | AR: 32   | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 40      |
-  DEBUG    OUTPUT o
-  DEBUG    TICK:  952 | AC 111     | IP: 112  | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 5      |
-  DEBUG    TICK:  955 | AC 3       | IP: 113  | AR: 39   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 39      |
-  DEBUG    TICK:  957 | AC 2       | IP: 114  | AR: 113  | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  960 | AC 2       | IP: 115  | AR: 39   | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 39     |
-  DEBUG    TICK:  963 | AC 2       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  966 | AC 2       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  969 | AC 32      | IP: 108  | AR: 40   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
-  DEBUG    TICK:  971 | AC 33      | IP: 109  | AR: 108  | PS: 000 | DR: 32      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK:  974 | AC 33      | IP: 110  | AR: 40   | PS: 000 | DR: 33      | mem[AR] 33      | CR: store 40     |
-  DEBUG    TICK:  978 | AC 44      | IP: 111  | AR: 33   | PS: 000 | DR: 44      | mem[AR] 44      | CR: load 40      |
-  DEBUG    OUTPUT ,
-  DEBUG    TICK:  982 | AC 44      | IP: 112  | AR: 2047 | PS: 000 | DR: 44      | mem[AR] 44      | CR: store 5      |
-  DEBUG    TICK:  985 | AC 2       | IP: 113  | AR: 39   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 39      |
-  DEBUG    TICK:  987 | AC 1       | IP: 114  | AR: 113  | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK:  990 | AC 1       | IP: 115  | AR: 39   | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 39     |
-  DEBUG    TICK:  993 | AC 1       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK:  996 | AC 1       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
-  DEBUG    TICK:  999 | AC 33      | IP: 108  | AR: 40   | PS: 000 | DR: 33      | mem[AR] 33      | CR: load 40      |
-  DEBUG    TICK: 1001 | AC 34      | IP: 109  | AR: 108  | PS: 000 | DR: 33      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK: 1004 | AC 34      | IP: 110  | AR: 40   | PS: 000 | DR: 34      | mem[AR] 34      | CR: store 40     |
-  DEBUG    TICK: 1008 | AC 32      | IP: 111  | AR: 34   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
-  DEBUG    OUTPUT  
-  DEBUG    TICK: 1012 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
-  DEBUG    TICK: 1015 | AC 1       | IP: 113  | AR: 39   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 39      |
-  DEBUG    TICK: 1017 | AC 0       | IP: 114  | AR: 113  | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1020 | AC 0       | IP: 115  | AR: 39   | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 39     |
-  DEBUG    TICK: 1023 | AC 0       | IP: 132  | AR: 132  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
-  DEBUG    TICK: 1026 | AC 1       | IP: 133  | AR: 3    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 3       |
-  DEBUG    TICK: 1029 | AC 1       | IP: 134  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmz 135      |
-  DEBUG    TICK: 1032 | AC 1       | IP: 159  | AR: 159  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 159      |
-  DEBUG    TICK: 1035 | AC 73      | IP: 160  | AR: 175  | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 175     |
-  DEBUG    TICK: 1038 | AC 73      | IP: 161  | AR: 41   | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 41     |
-  DEBUG    TICK: 1041 | AC 175     | IP: 162  | AR: 173  | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 173     |
-  DEBUG    TICK: 1043 | AC 174     | IP: 163  | AR: 162  | PS: 001 | DR: 175     | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1046 | AC 174     | IP: 164  | AR: 40   | PS: 001 | DR: 174     | mem[AR] 174     | CR: store 40     |
-  DEBUG    TICK: 1049 | AC 174     | IP: 117  | AR: 117  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 117      |
-  DEBUG    TICK: 1052 | AC 73      | IP: 118  | AR: 41   | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 41      |
-  DEBUG    TICK: 1055 | AC 73      | IP: 119  | AR: 39   | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 39     |
-  DEBUG    TICK: 1058 | AC 174     | IP: 120  | AR: 40   | PS: 000 | DR: 174     | mem[AR] 174     | CR: load 40      |
-  DEBUG    TICK: 1060 | AC 175     | IP: 121  | AR: 120  | PS: 000 | DR: 174     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK: 1063 | AC 175     | IP: 122  | AR: 40   | PS: 000 | DR: 175     | mem[AR] 175     | CR: store 40     |
-  DEBUG    TICK: 1067 | AC 73      | IP: 123  | AR: 175  | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 40      |
-  DEBUG    OUTPUT I
-  DEBUG    TICK: 1071 | AC 73      | IP: 124  | AR: 2047 | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 5      |
-  DEBUG    TICK: 1074 | AC 73      | IP: 125  | AR: 39   | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 39      |
-  DEBUG    TICK: 1076 | AC 72      | IP: 126  | AR: 125  | PS: 001 | DR: 73      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1079 | AC 72      | IP: 127  | AR: 39   | PS: 001 | DR: 72      | mem[AR] 72      | CR: store 39     |
-  DEBUG    TICK: 1082 | AC 4       | IP: 128  | AR: 0    | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 0       |
-  DEBUG    TICK: 1084 | AC 3       | IP: 129  | AR: 128  | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1087 | AC 3       | IP: 130  | AR: 0    | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 0      |
-  DEBUG    TICK: 1090 | AC 3       | IP: 131  | AR: 165  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
-  DEBUG    TICK: 1093 | AC 3       | IP: 119  | AR: 119  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 119      |
-  DEBUG    TICK: 1096 | AC 175     | IP: 120  | AR: 40   | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 40      |
-  DEBUG    TICK: 1098 | AC 176     | IP: 121  | AR: 120  | PS: 000 | DR: 175     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK: 1101 | AC 176     | IP: 122  | AR: 40   | PS: 000 | DR: 176     | mem[AR] 176     | CR: store 40     |
-  DEBUG    TICK: 1105 | AC 103     | IP: 123  | AR: 176  | PS: 000 | DR: 103     | mem[AR] 103     | CR: load 40      |
-  DEBUG    OUTPUT g
-  DEBUG    TICK: 1109 | AC 103     | IP: 124  | AR: 2047 | PS: 000 | DR: 103     | mem[AR] 103     | CR: store 5      |
-  DEBUG    TICK: 1112 | AC 72      | IP: 125  | AR: 39   | PS: 000 | DR: 72      | mem[AR] 72      | CR: load 39      |
-  DEBUG    TICK: 1114 | AC 71      | IP: 126  | AR: 125  | PS: 001 | DR: 72      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1117 | AC 71      | IP: 127  | AR: 39   | PS: 001 | DR: 71      | mem[AR] 71      | CR: store 39     |
-  DEBUG    TICK: 1120 | AC 3       | IP: 128  | AR: 0    | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 0       |
-  DEBUG    TICK: 1122 | AC 2       | IP: 129  | AR: 128  | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1125 | AC 2       | IP: 130  | AR: 0    | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 0      |
-  DEBUG    TICK: 1128 | AC 2       | IP: 131  | AR: 165  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
-  DEBUG    TICK: 1131 | AC 2       | IP: 119  | AR: 119  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 119      |
-  DEBUG    TICK: 1134 | AC 176     | IP: 120  | AR: 40   | PS: 000 | DR: 176     | mem[AR] 176     | CR: load 40      |
-  DEBUG    TICK: 1136 | AC 177     | IP: 121  | AR: 120  | PS: 000 | DR: 176     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK: 1139 | AC 177     | IP: 122  | AR: 40   | PS: 000 | DR: 177     | mem[AR] 177     | CR: store 40     |
-  DEBUG    TICK: 1143 | AC 111     | IP: 123  | AR: 177  | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 40      |
-  DEBUG    OUTPUT o
-  DEBUG    TICK: 1147 | AC 111     | IP: 124  | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 5      |
-  DEBUG    TICK: 1150 | AC 71      | IP: 125  | AR: 39   | PS: 000 | DR: 71      | mem[AR] 71      | CR: load 39      |
-  DEBUG    TICK: 1152 | AC 70      | IP: 126  | AR: 125  | PS: 001 | DR: 71      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1155 | AC 70      | IP: 127  | AR: 39   | PS: 001 | DR: 70      | mem[AR] 70      | CR: store 39     |
-  DEBUG    TICK: 1158 | AC 2       | IP: 128  | AR: 0    | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 0       |
-  DEBUG    TICK: 1160 | AC 1       | IP: 129  | AR: 128  | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1163 | AC 1       | IP: 130  | AR: 0    | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 0      |
-  DEBUG    TICK: 1166 | AC 1       | IP: 131  | AR: 165  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
-  DEBUG    TICK: 1169 | AC 1       | IP: 119  | AR: 119  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 119      |
-  DEBUG    TICK: 1172 | AC 177     | IP: 120  | AR: 40   | PS: 000 | DR: 177     | mem[AR] 177     | CR: load 40      |
-  DEBUG    TICK: 1174 | AC 178     | IP: 121  | AR: 120  | PS: 000 | DR: 177     | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK: 1177 | AC 178     | IP: 122  | AR: 40   | PS: 000 | DR: 178     | mem[AR] 178     | CR: store 40     |
-  DEBUG    TICK: 1181 | AC 114     | IP: 123  | AR: 178  | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 40      |
-  DEBUG    OUTPUT r
-  DEBUG    TICK: 1185 | AC 114     | IP: 124  | AR: 2047 | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 5      |
-  DEBUG    TICK: 1188 | AC 70      | IP: 125  | AR: 39   | PS: 000 | DR: 70      | mem[AR] 70      | CR: load 39      |
-  DEBUG    TICK: 1190 | AC 69      | IP: 126  | AR: 125  | PS: 001 | DR: 70      | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1193 | AC 69      | IP: 127  | AR: 39   | PS: 001 | DR: 69      | mem[AR] 69      | CR: store 39     |
-  DEBUG    TICK: 1196 | AC 1       | IP: 128  | AR: 0    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 0       |
-  DEBUG    TICK: 1198 | AC 0       | IP: 129  | AR: 128  | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
-  DEBUG    TICK: 1201 | AC 0       | IP: 130  | AR: 0    | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 0      |
-  DEBUG    TICK: 1204 | AC 0       | IP: 165  | AR: 165  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
-  DEBUG    TICK: 1207 | AC 36      | IP: 166  | AR: 38   | PS: 000 | DR: 36      | mem[AR] 36      | CR: load 38      |
-  DEBUG    TICK: 1209 | AC 37      | IP: 167  | AR: 166  | PS: 000 | DR: 36      | mem[AR] 0       | CR: inc          |
-  DEBUG    TICK: 1212 | AC 37      | IP: 168  | AR: 38   | PS: 000 | DR: 37      | mem[AR] 37      | CR: store 38     |
-  DEBUG    TICK: 1216 | AC 33      | IP: 169  | AR: 37   | PS: 000 | DR: 33      | mem[AR] 33      | CR: load 38      |
-  DEBUG    OUTPUT !
-  DEBUG    TICK: 1220 | AC 33      | IP: 170  | AR: 2047 | PS: 000 | DR: 33      | mem[AR] 33      | CR: store 5      |
-  DEBUG    TICK: 1223 | AC 33      | IP: 171  | AR: 171  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 171      |
-  DEBUG    TICK: 1225 | AC 33      | IP: 172  | AR: 171  | PS: 000 | DR: 0       | mem[AR] 0       | CR: hlt          |
+  DEBUG   machine:__print__     TICK:    3 | AC 18      | IP: 101  | AR: 6    | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 6       |
+  DEBUG   machine:__print__     TICK:    6 | AC 18      | IP: 102  | AR: 41   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 41     |
+  DEBUG   machine:__print__     TICK:    9 | AC 6       | IP: 103  | AR: 25   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 25      |
+  DEBUG   machine:__print__     TICK:   12 | AC 6       | IP: 104  | AR: 40   | PS: 000 | DR: 6       | mem[AR] 6       | CR: store 40     |
+  DEBUG   machine:__print__     TICK:   15 | AC 6       | IP: 105  | AR: 105  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 105      |
+  DEBUG   machine:__print__     TICK:   18 | AC 18      | IP: 106  | AR: 41   | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 41      |
+  DEBUG   machine:__print__     TICK:   21 | AC 18      | IP: 107  | AR: 39   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:   24 | AC 6       | IP: 108  | AR: 40   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 40      |
+  DEBUG   machine:__print__     TICK:   26 | AC 7       | IP: 109  | AR: 108  | PS: 000 | DR: 6       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:   29 | AC 7       | IP: 110  | AR: 40   | PS: 000 | DR: 7       | mem[AR] 7       | CR: store 40     |
+  DEBUG   machine:__print__     TICK:   33 | AC 87      | IP: 111  | AR: 7    | PS: 000 | DR: 87      | mem[AR] 87      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT W
+  DEBUG   machine:__print__     TICK:   37 | AC 87      | IP: 112  | AR: 2047 | PS: 000 | DR: 87      | mem[AR] 87      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:   40 | AC 18      | IP: 113  | AR: 39   | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:   42 | AC 17      | IP: 114  | AR: 113  | PS: 001 | DR: 18      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:   45 | AC 17      | IP: 115  | AR: 39   | PS: 001 | DR: 17      | mem[AR] 17      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:   48 | AC 17      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:   51 | AC 17      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:   54 | AC 7       | IP: 108  | AR: 40   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 40      |
+  DEBUG   machine:__print__     TICK:   56 | AC 8       | IP: 109  | AR: 108  | PS: 000 | DR: 7       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:   59 | AC 8       | IP: 110  | AR: 40   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 40     |
+  DEBUG   machine:__print__     TICK:   63 | AC 104     | IP: 111  | AR: 8    | PS: 000 | DR: 104     | mem[AR] 104     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT h
+  DEBUG   machine:__print__     TICK:   67 | AC 104     | IP: 112  | AR: 2047 | PS: 000 | DR: 104     | mem[AR] 104     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:   70 | AC 17      | IP: 113  | AR: 39   | PS: 000 | DR: 17      | mem[AR] 17      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:   72 | AC 16      | IP: 114  | AR: 113  | PS: 001 | DR: 17      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:   75 | AC 16      | IP: 115  | AR: 39   | PS: 001 | DR: 16      | mem[AR] 16      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:   78 | AC 16      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:   81 | AC 16      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:   84 | AC 8       | IP: 108  | AR: 40   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 40      |
+  DEBUG   machine:__print__     TICK:   86 | AC 9       | IP: 109  | AR: 108  | PS: 000 | DR: 8       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:   89 | AC 9       | IP: 110  | AR: 40   | PS: 000 | DR: 9       | mem[AR] 9       | CR: store 40     |
+  DEBUG   machine:__print__     TICK:   93 | AC 97      | IP: 111  | AR: 9    | PS: 000 | DR: 97      | mem[AR] 97      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT a
+  DEBUG   machine:__print__     TICK:   97 | AC 97      | IP: 112  | AR: 2047 | PS: 000 | DR: 97      | mem[AR] 97      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  100 | AC 16      | IP: 113  | AR: 39   | PS: 000 | DR: 16      | mem[AR] 16      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  102 | AC 15      | IP: 114  | AR: 113  | PS: 001 | DR: 16      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  105 | AC 15      | IP: 115  | AR: 39   | PS: 001 | DR: 15      | mem[AR] 15      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  108 | AC 15      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  111 | AC 15      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  114 | AC 9       | IP: 108  | AR: 40   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  116 | AC 10      | IP: 109  | AR: 108  | PS: 000 | DR: 9       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  119 | AC 10      | IP: 110  | AR: 40   | PS: 000 | DR: 10      | mem[AR] 10      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  123 | AC 116     | IP: 111  | AR: 10   | PS: 000 | DR: 116     | mem[AR] 116     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT t
+  DEBUG   machine:__print__     TICK:  127 | AC 116     | IP: 112  | AR: 2047 | PS: 000 | DR: 116     | mem[AR] 116     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  130 | AC 15      | IP: 113  | AR: 39   | PS: 000 | DR: 15      | mem[AR] 15      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  132 | AC 14      | IP: 114  | AR: 113  | PS: 001 | DR: 15      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  135 | AC 14      | IP: 115  | AR: 39   | PS: 001 | DR: 14      | mem[AR] 14      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  138 | AC 14      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  141 | AC 14      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  144 | AC 10      | IP: 108  | AR: 40   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  146 | AC 11      | IP: 109  | AR: 108  | PS: 000 | DR: 10      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  149 | AC 11      | IP: 110  | AR: 40   | PS: 000 | DR: 11      | mem[AR] 11      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  153 | AC 32      | IP: 111  | AR: 11   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT  
+  DEBUG   machine:__print__     TICK:  157 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  160 | AC 14      | IP: 113  | AR: 39   | PS: 000 | DR: 14      | mem[AR] 14      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  162 | AC 13      | IP: 114  | AR: 113  | PS: 001 | DR: 14      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  165 | AC 13      | IP: 115  | AR: 39   | PS: 001 | DR: 13      | mem[AR] 13      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  168 | AC 13      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  171 | AC 13      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  174 | AC 11      | IP: 108  | AR: 40   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  176 | AC 12      | IP: 109  | AR: 108  | PS: 000 | DR: 11      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  179 | AC 12      | IP: 110  | AR: 40   | PS: 000 | DR: 12      | mem[AR] 12      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  183 | AC 105     | IP: 111  | AR: 12   | PS: 000 | DR: 105     | mem[AR] 105     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT i
+  DEBUG   machine:__print__     TICK:  187 | AC 105     | IP: 112  | AR: 2047 | PS: 000 | DR: 105     | mem[AR] 105     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  190 | AC 13      | IP: 113  | AR: 39   | PS: 000 | DR: 13      | mem[AR] 13      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  192 | AC 12      | IP: 114  | AR: 113  | PS: 001 | DR: 13      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  195 | AC 12      | IP: 115  | AR: 39   | PS: 001 | DR: 12      | mem[AR] 12      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  198 | AC 12      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  201 | AC 12      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  204 | AC 12      | IP: 108  | AR: 40   | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  206 | AC 13      | IP: 109  | AR: 108  | PS: 000 | DR: 12      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  209 | AC 13      | IP: 110  | AR: 40   | PS: 000 | DR: 13      | mem[AR] 13      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  213 | AC 115     | IP: 111  | AR: 13   | PS: 000 | DR: 115     | mem[AR] 115     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT s
+  DEBUG   machine:__print__     TICK:  217 | AC 115     | IP: 112  | AR: 2047 | PS: 000 | DR: 115     | mem[AR] 115     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  220 | AC 12      | IP: 113  | AR: 39   | PS: 000 | DR: 12      | mem[AR] 12      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  222 | AC 11      | IP: 114  | AR: 113  | PS: 001 | DR: 12      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  225 | AC 11      | IP: 115  | AR: 39   | PS: 001 | DR: 11      | mem[AR] 11      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  228 | AC 11      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  231 | AC 11      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  234 | AC 13      | IP: 108  | AR: 40   | PS: 000 | DR: 13      | mem[AR] 13      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  236 | AC 14      | IP: 109  | AR: 108  | PS: 000 | DR: 13      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  239 | AC 14      | IP: 110  | AR: 40   | PS: 000 | DR: 14      | mem[AR] 14      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  243 | AC 32      | IP: 111  | AR: 14   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT  
+  DEBUG   machine:__print__     TICK:  247 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  250 | AC 11      | IP: 113  | AR: 39   | PS: 000 | DR: 11      | mem[AR] 11      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  252 | AC 10      | IP: 114  | AR: 113  | PS: 001 | DR: 11      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  255 | AC 10      | IP: 115  | AR: 39   | PS: 001 | DR: 10      | mem[AR] 10      | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  258 | AC 10      | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  261 | AC 10      | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  264 | AC 14      | IP: 108  | AR: 40   | PS: 000 | DR: 14      | mem[AR] 14      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  266 | AC 15      | IP: 109  | AR: 108  | PS: 000 | DR: 14      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  269 | AC 15      | IP: 110  | AR: 40   | PS: 000 | DR: 15      | mem[AR] 15      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  273 | AC 121     | IP: 111  | AR: 15   | PS: 000 | DR: 121     | mem[AR] 121     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT y
+  DEBUG   machine:__print__     TICK:  277 | AC 121     | IP: 112  | AR: 2047 | PS: 000 | DR: 121     | mem[AR] 121     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  280 | AC 10      | IP: 113  | AR: 39   | PS: 000 | DR: 10      | mem[AR] 10      | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  282 | AC 9       | IP: 114  | AR: 113  | PS: 001 | DR: 10      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  285 | AC 9       | IP: 115  | AR: 39   | PS: 001 | DR: 9       | mem[AR] 9       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  288 | AC 9       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  291 | AC 9       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  294 | AC 15      | IP: 108  | AR: 40   | PS: 000 | DR: 15      | mem[AR] 15      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  296 | AC 16      | IP: 109  | AR: 108  | PS: 000 | DR: 15      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  299 | AC 16      | IP: 110  | AR: 40   | PS: 000 | DR: 16      | mem[AR] 16      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  303 | AC 111     | IP: 111  | AR: 16   | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT o
+  DEBUG   machine:__print__     TICK:  307 | AC 111     | IP: 112  | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  310 | AC 9       | IP: 113  | AR: 39   | PS: 000 | DR: 9       | mem[AR] 9       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  312 | AC 8       | IP: 114  | AR: 113  | PS: 001 | DR: 9       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  315 | AC 8       | IP: 115  | AR: 39   | PS: 001 | DR: 8       | mem[AR] 8       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  318 | AC 8       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  321 | AC 8       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  324 | AC 16      | IP: 108  | AR: 40   | PS: 000 | DR: 16      | mem[AR] 16      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  326 | AC 17      | IP: 109  | AR: 108  | PS: 000 | DR: 16      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  329 | AC 17      | IP: 110  | AR: 40   | PS: 000 | DR: 17      | mem[AR] 17      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  333 | AC 117     | IP: 111  | AR: 17   | PS: 000 | DR: 117     | mem[AR] 117     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT u
+  DEBUG   machine:__print__     TICK:  337 | AC 117     | IP: 112  | AR: 2047 | PS: 000 | DR: 117     | mem[AR] 117     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  340 | AC 8       | IP: 113  | AR: 39   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  342 | AC 7       | IP: 114  | AR: 113  | PS: 001 | DR: 8       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  345 | AC 7       | IP: 115  | AR: 39   | PS: 001 | DR: 7       | mem[AR] 7       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  348 | AC 7       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  351 | AC 7       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  354 | AC 17      | IP: 108  | AR: 40   | PS: 000 | DR: 17      | mem[AR] 17      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  356 | AC 18      | IP: 109  | AR: 108  | PS: 000 | DR: 17      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  359 | AC 18      | IP: 110  | AR: 40   | PS: 000 | DR: 18      | mem[AR] 18      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  363 | AC 114     | IP: 111  | AR: 18   | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT r
+  DEBUG   machine:__print__     TICK:  367 | AC 114     | IP: 112  | AR: 2047 | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  370 | AC 7       | IP: 113  | AR: 39   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  372 | AC 6       | IP: 114  | AR: 113  | PS: 001 | DR: 7       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  375 | AC 6       | IP: 115  | AR: 39   | PS: 001 | DR: 6       | mem[AR] 6       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  378 | AC 6       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  381 | AC 6       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  384 | AC 18      | IP: 108  | AR: 40   | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  386 | AC 19      | IP: 109  | AR: 108  | PS: 000 | DR: 18      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  389 | AC 19      | IP: 110  | AR: 40   | PS: 000 | DR: 19      | mem[AR] 19      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  393 | AC 32      | IP: 111  | AR: 19   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT  
+  DEBUG   machine:__print__     TICK:  397 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  400 | AC 6       | IP: 113  | AR: 39   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  402 | AC 5       | IP: 114  | AR: 113  | PS: 001 | DR: 6       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  405 | AC 5       | IP: 115  | AR: 39   | PS: 001 | DR: 5       | mem[AR] 5       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  408 | AC 5       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  411 | AC 5       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  414 | AC 19      | IP: 108  | AR: 40   | PS: 000 | DR: 19      | mem[AR] 19      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  416 | AC 20      | IP: 109  | AR: 108  | PS: 000 | DR: 19      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  419 | AC 20      | IP: 110  | AR: 40   | PS: 000 | DR: 20      | mem[AR] 20      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  423 | AC 110     | IP: 111  | AR: 20   | PS: 000 | DR: 110     | mem[AR] 110     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT n
+  DEBUG   machine:__print__     TICK:  427 | AC 110     | IP: 112  | AR: 2047 | PS: 000 | DR: 110     | mem[AR] 110     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  430 | AC 5       | IP: 113  | AR: 39   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  432 | AC 4       | IP: 114  | AR: 113  | PS: 001 | DR: 5       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  435 | AC 4       | IP: 115  | AR: 39   | PS: 001 | DR: 4       | mem[AR] 4       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  438 | AC 4       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  441 | AC 4       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  444 | AC 20      | IP: 108  | AR: 40   | PS: 000 | DR: 20      | mem[AR] 20      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  446 | AC 21      | IP: 109  | AR: 108  | PS: 000 | DR: 20      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  449 | AC 21      | IP: 110  | AR: 40   | PS: 000 | DR: 21      | mem[AR] 21      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  453 | AC 97      | IP: 111  | AR: 21   | PS: 000 | DR: 97      | mem[AR] 97      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT a
+  DEBUG   machine:__print__     TICK:  457 | AC 97      | IP: 112  | AR: 2047 | PS: 000 | DR: 97      | mem[AR] 97      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  460 | AC 4       | IP: 113  | AR: 39   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  462 | AC 3       | IP: 114  | AR: 113  | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  465 | AC 3       | IP: 115  | AR: 39   | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  468 | AC 3       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  471 | AC 3       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  474 | AC 21      | IP: 108  | AR: 40   | PS: 000 | DR: 21      | mem[AR] 21      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  476 | AC 22      | IP: 109  | AR: 108  | PS: 000 | DR: 21      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  479 | AC 22      | IP: 110  | AR: 40   | PS: 000 | DR: 22      | mem[AR] 22      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  483 | AC 109     | IP: 111  | AR: 22   | PS: 000 | DR: 109     | mem[AR] 109     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT m
+  DEBUG   machine:__print__     TICK:  487 | AC 109     | IP: 112  | AR: 2047 | PS: 000 | DR: 109     | mem[AR] 109     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  490 | AC 3       | IP: 113  | AR: 39   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  492 | AC 2       | IP: 114  | AR: 113  | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  495 | AC 2       | IP: 115  | AR: 39   | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  498 | AC 2       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  501 | AC 2       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  504 | AC 22      | IP: 108  | AR: 40   | PS: 000 | DR: 22      | mem[AR] 22      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  506 | AC 23      | IP: 109  | AR: 108  | PS: 000 | DR: 22      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  509 | AC 23      | IP: 110  | AR: 40   | PS: 000 | DR: 23      | mem[AR] 23      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  513 | AC 101     | IP: 111  | AR: 23   | PS: 000 | DR: 101     | mem[AR] 101     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT e
+  DEBUG   machine:__print__     TICK:  517 | AC 101     | IP: 112  | AR: 2047 | PS: 000 | DR: 101     | mem[AR] 101     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  520 | AC 2       | IP: 113  | AR: 39   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  522 | AC 1       | IP: 114  | AR: 113  | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  525 | AC 1       | IP: 115  | AR: 39   | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  528 | AC 1       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  531 | AC 1       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  534 | AC 23      | IP: 108  | AR: 40   | PS: 000 | DR: 23      | mem[AR] 23      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  536 | AC 24      | IP: 109  | AR: 108  | PS: 000 | DR: 23      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  539 | AC 24      | IP: 110  | AR: 40   | PS: 000 | DR: 24      | mem[AR] 24      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  543 | AC 63      | IP: 111  | AR: 24   | PS: 000 | DR: 63      | mem[AR] 63      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT ?
+  DEBUG   machine:__print__     TICK:  547 | AC 63      | IP: 112  | AR: 2047 | PS: 000 | DR: 63      | mem[AR] 63      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  550 | AC 1       | IP: 113  | AR: 39   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  552 | AC 0       | IP: 114  | AR: 113  | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  555 | AC 0       | IP: 115  | AR: 39   | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  558 | AC 0       | IP: 132  | AR: 132  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  561 | AC 0       | IP: 133  | AR: 3    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 3       |
+  DEBUG   machine:__print__     TICK:  564 | AC 0       | IP: 135  | AR: 135  | PS: 010 | DR: 0       | mem[AR] 0       | CR: jmz 135      |
+  DEBUG   machine:rd            INPUT I
+  DEBUG   machine:__print__     TICK:  568 | AC 73      | IP: 136  | AR: 2046 | PS: 000 | DR: 73      | mem[AR] 0       | CR: load 4       |
+  DEBUG   machine:__print__     TICK:  571 | AC 73      | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
+  DEBUG   machine:__print__     TICK:  574 | AC 73      | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
+  DEBUG   machine:__print__     TICK:  577 | AC 73      | IP: 143  | AR: 172  | PS: 001 | DR: 73      | mem[AR] 73      | CR: store 172    |
+  DEBUG   machine:__print__     TICK:  580 | AC 175     | IP: 144  | AR: 174  | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  583 | AC 175     | IP: 145  | AR: 40   | PS: 000 | DR: 175     | mem[AR] 175     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  586 | AC 73      | IP: 146  | AR: 172  | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 172     |
+  DEBUG   machine:__print__     TICK:  590 | AC 73      | IP: 147  | AR: 175  | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  593 | AC 175     | IP: 148  | AR: 174  | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  595 | AC 176     | IP: 149  | AR: 148  | PS: 000 | DR: 175     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  598 | AC 176     | IP: 150  | AR: 174  | PS: 000 | DR: 176     | mem[AR] 176     | CR: store 174    |
+  DEBUG   machine:__print__     TICK:  601 | AC 0       | IP: 151  | AR: 0    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 0       |
+  DEBUG   machine:__print__     TICK:  603 | AC 1       | IP: 152  | AR: 151  | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  606 | AC 1       | IP: 153  | AR: 0    | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 0      |
+  DEBUG   machine:__print__     TICK:  609 | AC 1       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
+  DEBUG   machine:rd            INPUT g
+  DEBUG   machine:__print__     TICK:  613 | AC 103     | IP: 136  | AR: 2046 | PS: 000 | DR: 103     | mem[AR] 0       | CR: load 4       |
+  DEBUG   machine:__print__     TICK:  616 | AC 103     | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
+  DEBUG   machine:__print__     TICK:  619 | AC 103     | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
+  DEBUG   machine:__print__     TICK:  622 | AC 103     | IP: 143  | AR: 172  | PS: 001 | DR: 103     | mem[AR] 103     | CR: store 172    |
+  DEBUG   machine:__print__     TICK:  625 | AC 176     | IP: 144  | AR: 174  | PS: 000 | DR: 176     | mem[AR] 176     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  628 | AC 176     | IP: 145  | AR: 40   | PS: 000 | DR: 176     | mem[AR] 176     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  631 | AC 103     | IP: 146  | AR: 172  | PS: 000 | DR: 103     | mem[AR] 103     | CR: load 172     |
+  DEBUG   machine:__print__     TICK:  635 | AC 103     | IP: 147  | AR: 176  | PS: 000 | DR: 103     | mem[AR] 103     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  638 | AC 176     | IP: 148  | AR: 174  | PS: 000 | DR: 176     | mem[AR] 176     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  640 | AC 177     | IP: 149  | AR: 148  | PS: 000 | DR: 176     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  643 | AC 177     | IP: 150  | AR: 174  | PS: 000 | DR: 177     | mem[AR] 177     | CR: store 174    |
+  DEBUG   machine:__print__     TICK:  646 | AC 1       | IP: 151  | AR: 0    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 0       |
+  DEBUG   machine:__print__     TICK:  648 | AC 2       | IP: 152  | AR: 151  | PS: 000 | DR: 1       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  651 | AC 2       | IP: 153  | AR: 0    | PS: 000 | DR: 2       | mem[AR] 2       | CR: store 0      |
+  DEBUG   machine:__print__     TICK:  654 | AC 2       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
+  DEBUG   machine:rd            INPUT o
+  DEBUG   machine:__print__     TICK:  658 | AC 111     | IP: 136  | AR: 2046 | PS: 000 | DR: 111     | mem[AR] 0       | CR: load 4       |
+  DEBUG   machine:__print__     TICK:  661 | AC 111     | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
+  DEBUG   machine:__print__     TICK:  664 | AC 111     | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
+  DEBUG   machine:__print__     TICK:  667 | AC 111     | IP: 143  | AR: 172  | PS: 001 | DR: 111     | mem[AR] 111     | CR: store 172    |
+  DEBUG   machine:__print__     TICK:  670 | AC 177     | IP: 144  | AR: 174  | PS: 000 | DR: 177     | mem[AR] 177     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  673 | AC 177     | IP: 145  | AR: 40   | PS: 000 | DR: 177     | mem[AR] 177     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  676 | AC 111     | IP: 146  | AR: 172  | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 172     |
+  DEBUG   machine:__print__     TICK:  680 | AC 111     | IP: 147  | AR: 177  | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  683 | AC 177     | IP: 148  | AR: 174  | PS: 000 | DR: 177     | mem[AR] 177     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  685 | AC 178     | IP: 149  | AR: 148  | PS: 000 | DR: 177     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  688 | AC 178     | IP: 150  | AR: 174  | PS: 000 | DR: 178     | mem[AR] 178     | CR: store 174    |
+  DEBUG   machine:__print__     TICK:  691 | AC 2       | IP: 151  | AR: 0    | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 0       |
+  DEBUG   machine:__print__     TICK:  693 | AC 3       | IP: 152  | AR: 151  | PS: 000 | DR: 2       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  696 | AC 3       | IP: 153  | AR: 0    | PS: 000 | DR: 3       | mem[AR] 3       | CR: store 0      |
+  DEBUG   machine:__print__     TICK:  699 | AC 3       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
+  DEBUG   machine:rd            INPUT r
+  DEBUG   machine:__print__     TICK:  703 | AC 114     | IP: 136  | AR: 2046 | PS: 000 | DR: 114     | mem[AR] 0       | CR: load 4       |
+  DEBUG   machine:__print__     TICK:  706 | AC 114     | IP: 137  | AR: 2    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
+  DEBUG   machine:__print__     TICK:  709 | AC 114     | IP: 142  | AR: 142  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
+  DEBUG   machine:__print__     TICK:  712 | AC 114     | IP: 143  | AR: 172  | PS: 001 | DR: 114     | mem[AR] 114     | CR: store 172    |
+  DEBUG   machine:__print__     TICK:  715 | AC 178     | IP: 144  | AR: 174  | PS: 000 | DR: 178     | mem[AR] 178     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  718 | AC 178     | IP: 145  | AR: 40   | PS: 000 | DR: 178     | mem[AR] 178     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  721 | AC 114     | IP: 146  | AR: 172  | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 172     |
+  DEBUG   machine:__print__     TICK:  725 | AC 114     | IP: 147  | AR: 178  | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  728 | AC 178     | IP: 148  | AR: 174  | PS: 000 | DR: 178     | mem[AR] 178     | CR: load 174     |
+  DEBUG   machine:__print__     TICK:  730 | AC 179     | IP: 149  | AR: 148  | PS: 000 | DR: 178     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  733 | AC 179     | IP: 150  | AR: 174  | PS: 000 | DR: 179     | mem[AR] 179     | CR: store 174    |
+  DEBUG   machine:__print__     TICK:  736 | AC 3       | IP: 151  | AR: 0    | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 0       |
+  DEBUG   machine:__print__     TICK:  738 | AC 4       | IP: 152  | AR: 151  | PS: 000 | DR: 3       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  741 | AC 4       | IP: 153  | AR: 0    | PS: 000 | DR: 4       | mem[AR] 4       | CR: store 0      |
+  DEBUG   machine:__print__     TICK:  744 | AC 4       | IP: 135  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 135      |
+  DEBUG   machine:__print__     TICK:  748 | AC 0       | IP: 136  | AR: 2046 | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 4       |
+  DEBUG   machine:__print__     TICK:  751 | AC 0       | IP: 137  | AR: 2    | PS: 011 | DR: 0       | mem[AR] 0       | CR: cmp 2        |
+  DEBUG   machine:__print__     TICK:  754 | AC 0       | IP: 138  | AR: 142  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmnz 142     |
+  DEBUG   machine:__print__     TICK:  757 | AC 0       | IP: 139  | AR: 3    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 3       |
+  DEBUG   machine:__print__     TICK:  759 | AC 1       | IP: 140  | AR: 139  | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  762 | AC 1       | IP: 141  | AR: 3    | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 3      |
+  DEBUG   machine:__print__     TICK:  765 | AC 1       | IP: 154  | AR: 154  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 154      |
+  DEBUG   machine:__print__     TICK:  768 | AC 8       | IP: 155  | AR: 26   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 26      |
+  DEBUG   machine:__print__     TICK:  771 | AC 8       | IP: 156  | AR: 41   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 41     |
+  DEBUG   machine:__print__     TICK:  774 | AC 26      | IP: 157  | AR: 35   | PS: 000 | DR: 26      | mem[AR] 26      | CR: load 35      |
+  DEBUG   machine:__print__     TICK:  777 | AC 26      | IP: 158  | AR: 40   | PS: 000 | DR: 26      | mem[AR] 26      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  780 | AC 26      | IP: 105  | AR: 105  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 105      |
+  DEBUG   machine:__print__     TICK:  783 | AC 8       | IP: 106  | AR: 41   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 41      |
+  DEBUG   machine:__print__     TICK:  786 | AC 8       | IP: 107  | AR: 39   | PS: 000 | DR: 8       | mem[AR] 8       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  789 | AC 26      | IP: 108  | AR: 40   | PS: 000 | DR: 26      | mem[AR] 26      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  791 | AC 27      | IP: 109  | AR: 108  | PS: 000 | DR: 26      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  794 | AC 27      | IP: 110  | AR: 40   | PS: 000 | DR: 27      | mem[AR] 27      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  798 | AC 32      | IP: 111  | AR: 27   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT  
+  DEBUG   machine:__print__     TICK:  802 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  805 | AC 8       | IP: 113  | AR: 39   | PS: 000 | DR: 8       | mem[AR] 8       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  807 | AC 7       | IP: 114  | AR: 113  | PS: 001 | DR: 8       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  810 | AC 7       | IP: 115  | AR: 39   | PS: 001 | DR: 7       | mem[AR] 7       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  813 | AC 7       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  816 | AC 7       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  819 | AC 27      | IP: 108  | AR: 40   | PS: 000 | DR: 27      | mem[AR] 27      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  821 | AC 28      | IP: 109  | AR: 108  | PS: 000 | DR: 27      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  824 | AC 28      | IP: 110  | AR: 40   | PS: 000 | DR: 28      | mem[AR] 28      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  828 | AC 72      | IP: 111  | AR: 28   | PS: 000 | DR: 72      | mem[AR] 72      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT H
+  DEBUG   machine:__print__     TICK:  832 | AC 72      | IP: 112  | AR: 2047 | PS: 000 | DR: 72      | mem[AR] 72      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  835 | AC 7       | IP: 113  | AR: 39   | PS: 000 | DR: 7       | mem[AR] 7       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  837 | AC 6       | IP: 114  | AR: 113  | PS: 001 | DR: 7       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  840 | AC 6       | IP: 115  | AR: 39   | PS: 001 | DR: 6       | mem[AR] 6       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  843 | AC 6       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  846 | AC 6       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  849 | AC 28      | IP: 108  | AR: 40   | PS: 000 | DR: 28      | mem[AR] 28      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  851 | AC 29      | IP: 109  | AR: 108  | PS: 000 | DR: 28      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  854 | AC 29      | IP: 110  | AR: 40   | PS: 000 | DR: 29      | mem[AR] 29      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  858 | AC 101     | IP: 111  | AR: 29   | PS: 000 | DR: 101     | mem[AR] 101     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT e
+  DEBUG   machine:__print__     TICK:  862 | AC 101     | IP: 112  | AR: 2047 | PS: 000 | DR: 101     | mem[AR] 101     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  865 | AC 6       | IP: 113  | AR: 39   | PS: 000 | DR: 6       | mem[AR] 6       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  867 | AC 5       | IP: 114  | AR: 113  | PS: 001 | DR: 6       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  870 | AC 5       | IP: 115  | AR: 39   | PS: 001 | DR: 5       | mem[AR] 5       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  873 | AC 5       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  876 | AC 5       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  879 | AC 29      | IP: 108  | AR: 40   | PS: 000 | DR: 29      | mem[AR] 29      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  881 | AC 30      | IP: 109  | AR: 108  | PS: 000 | DR: 29      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  884 | AC 30      | IP: 110  | AR: 40   | PS: 000 | DR: 30      | mem[AR] 30      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  888 | AC 108     | IP: 111  | AR: 30   | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT l
+  DEBUG   machine:__print__     TICK:  892 | AC 108     | IP: 112  | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  895 | AC 5       | IP: 113  | AR: 39   | PS: 000 | DR: 5       | mem[AR] 5       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  897 | AC 4       | IP: 114  | AR: 113  | PS: 001 | DR: 5       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  900 | AC 4       | IP: 115  | AR: 39   | PS: 001 | DR: 4       | mem[AR] 4       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  903 | AC 4       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  906 | AC 4       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  909 | AC 30      | IP: 108  | AR: 40   | PS: 000 | DR: 30      | mem[AR] 30      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  911 | AC 31      | IP: 109  | AR: 108  | PS: 000 | DR: 30      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  914 | AC 31      | IP: 110  | AR: 40   | PS: 000 | DR: 31      | mem[AR] 31      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  918 | AC 108     | IP: 111  | AR: 31   | PS: 000 | DR: 108     | mem[AR] 108     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT l
+  DEBUG   machine:__print__     TICK:  922 | AC 108     | IP: 112  | AR: 2047 | PS: 000 | DR: 108     | mem[AR] 108     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  925 | AC 4       | IP: 113  | AR: 39   | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  927 | AC 3       | IP: 114  | AR: 113  | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  930 | AC 3       | IP: 115  | AR: 39   | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  933 | AC 3       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  936 | AC 3       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  939 | AC 31      | IP: 108  | AR: 40   | PS: 000 | DR: 31      | mem[AR] 31      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  941 | AC 32      | IP: 109  | AR: 108  | PS: 000 | DR: 31      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  944 | AC 32      | IP: 110  | AR: 40   | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  948 | AC 111     | IP: 111  | AR: 32   | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT o
+  DEBUG   machine:__print__     TICK:  952 | AC 111     | IP: 112  | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  955 | AC 3       | IP: 113  | AR: 39   | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  957 | AC 2       | IP: 114  | AR: 113  | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  960 | AC 2       | IP: 115  | AR: 39   | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  963 | AC 2       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  966 | AC 2       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  969 | AC 32      | IP: 108  | AR: 40   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
+  DEBUG   machine:__print__     TICK:  971 | AC 33      | IP: 109  | AR: 108  | PS: 000 | DR: 32      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK:  974 | AC 33      | IP: 110  | AR: 40   | PS: 000 | DR: 33      | mem[AR] 33      | CR: store 40     |
+  DEBUG   machine:__print__     TICK:  978 | AC 44      | IP: 111  | AR: 33   | PS: 000 | DR: 44      | mem[AR] 44      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT ,
+  DEBUG   machine:__print__     TICK:  982 | AC 44      | IP: 112  | AR: 2047 | PS: 000 | DR: 44      | mem[AR] 44      | CR: store 5      |
+  DEBUG   machine:__print__     TICK:  985 | AC 2       | IP: 113  | AR: 39   | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 39      |
+  DEBUG   machine:__print__     TICK:  987 | AC 1       | IP: 114  | AR: 113  | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK:  990 | AC 1       | IP: 115  | AR: 39   | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 39     |
+  DEBUG   machine:__print__     TICK:  993 | AC 1       | IP: 116  | AR: 132  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK:  996 | AC 1       | IP: 107  | AR: 107  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 107      |
+  DEBUG   machine:__print__     TICK:  999 | AC 33      | IP: 108  | AR: 40   | PS: 000 | DR: 33      | mem[AR] 33      | CR: load 40      |
+  DEBUG   machine:__print__     TICK: 1001 | AC 34      | IP: 109  | AR: 108  | PS: 000 | DR: 33      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK: 1004 | AC 34      | IP: 110  | AR: 40   | PS: 000 | DR: 34      | mem[AR] 34      | CR: store 40     |
+  DEBUG   machine:__print__     TICK: 1008 | AC 32      | IP: 111  | AR: 34   | PS: 000 | DR: 32      | mem[AR] 32      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT  
+  DEBUG   machine:__print__     TICK: 1012 | AC 32      | IP: 112  | AR: 2047 | PS: 000 | DR: 32      | mem[AR] 32      | CR: store 5      |
+  DEBUG   machine:__print__     TICK: 1015 | AC 1       | IP: 113  | AR: 39   | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 39      |
+  DEBUG   machine:__print__     TICK: 1017 | AC 0       | IP: 114  | AR: 113  | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1020 | AC 0       | IP: 115  | AR: 39   | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 39     |
+  DEBUG   machine:__print__     TICK: 1023 | AC 0       | IP: 132  | AR: 132  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 132      |
+  DEBUG   machine:__print__     TICK: 1026 | AC 1       | IP: 133  | AR: 3    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 3       |
+  DEBUG   machine:__print__     TICK: 1029 | AC 1       | IP: 134  | AR: 135  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmz 135      |
+  DEBUG   machine:__print__     TICK: 1032 | AC 1       | IP: 159  | AR: 159  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 159      |
+  DEBUG   machine:__print__     TICK: 1035 | AC 73      | IP: 160  | AR: 175  | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 175     |
+  DEBUG   machine:__print__     TICK: 1038 | AC 73      | IP: 161  | AR: 41   | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 41     |
+  DEBUG   machine:__print__     TICK: 1041 | AC 175     | IP: 162  | AR: 173  | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 173     |
+  DEBUG   machine:__print__     TICK: 1043 | AC 174     | IP: 163  | AR: 162  | PS: 001 | DR: 175     | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1046 | AC 174     | IP: 164  | AR: 40   | PS: 001 | DR: 174     | mem[AR] 174     | CR: store 40     |
+  DEBUG   machine:__print__     TICK: 1049 | AC 174     | IP: 117  | AR: 117  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 117      |
+  DEBUG   machine:__print__     TICK: 1052 | AC 73      | IP: 118  | AR: 41   | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 41      |
+  DEBUG   machine:__print__     TICK: 1055 | AC 73      | IP: 119  | AR: 39   | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 39     |
+  DEBUG   machine:__print__     TICK: 1058 | AC 174     | IP: 120  | AR: 40   | PS: 000 | DR: 174     | mem[AR] 174     | CR: load 40      |
+  DEBUG   machine:__print__     TICK: 1060 | AC 175     | IP: 121  | AR: 120  | PS: 000 | DR: 174     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK: 1063 | AC 175     | IP: 122  | AR: 40   | PS: 000 | DR: 175     | mem[AR] 175     | CR: store 40     |
+  DEBUG   machine:__print__     TICK: 1067 | AC 73      | IP: 123  | AR: 175  | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT I
+  DEBUG   machine:__print__     TICK: 1071 | AC 73      | IP: 124  | AR: 2047 | PS: 000 | DR: 73      | mem[AR] 73      | CR: store 5      |
+  DEBUG   machine:__print__     TICK: 1074 | AC 73      | IP: 125  | AR: 39   | PS: 000 | DR: 73      | mem[AR] 73      | CR: load 39      |
+  DEBUG   machine:__print__     TICK: 1076 | AC 72      | IP: 126  | AR: 125  | PS: 001 | DR: 73      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1079 | AC 72      | IP: 127  | AR: 39   | PS: 001 | DR: 72      | mem[AR] 72      | CR: store 39     |
+  DEBUG   machine:__print__     TICK: 1082 | AC 4       | IP: 128  | AR: 0    | PS: 000 | DR: 4       | mem[AR] 4       | CR: load 0       |
+  DEBUG   machine:__print__     TICK: 1084 | AC 3       | IP: 129  | AR: 128  | PS: 001 | DR: 4       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1087 | AC 3       | IP: 130  | AR: 0    | PS: 001 | DR: 3       | mem[AR] 3       | CR: store 0      |
+  DEBUG   machine:__print__     TICK: 1090 | AC 3       | IP: 131  | AR: 165  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
+  DEBUG   machine:__print__     TICK: 1093 | AC 3       | IP: 119  | AR: 119  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 119      |
+  DEBUG   machine:__print__     TICK: 1096 | AC 175     | IP: 120  | AR: 40   | PS: 000 | DR: 175     | mem[AR] 175     | CR: load 40      |
+  DEBUG   machine:__print__     TICK: 1098 | AC 176     | IP: 121  | AR: 120  | PS: 000 | DR: 175     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK: 1101 | AC 176     | IP: 122  | AR: 40   | PS: 000 | DR: 176     | mem[AR] 176     | CR: store 40     |
+  DEBUG   machine:__print__     TICK: 1105 | AC 103     | IP: 123  | AR: 176  | PS: 000 | DR: 103     | mem[AR] 103     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT g
+  DEBUG   machine:__print__     TICK: 1109 | AC 103     | IP: 124  | AR: 2047 | PS: 000 | DR: 103     | mem[AR] 103     | CR: store 5      |
+  DEBUG   machine:__print__     TICK: 1112 | AC 72      | IP: 125  | AR: 39   | PS: 000 | DR: 72      | mem[AR] 72      | CR: load 39      |
+  DEBUG   machine:__print__     TICK: 1114 | AC 71      | IP: 126  | AR: 125  | PS: 001 | DR: 72      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1117 | AC 71      | IP: 127  | AR: 39   | PS: 001 | DR: 71      | mem[AR] 71      | CR: store 39     |
+  DEBUG   machine:__print__     TICK: 1120 | AC 3       | IP: 128  | AR: 0    | PS: 000 | DR: 3       | mem[AR] 3       | CR: load 0       |
+  DEBUG   machine:__print__     TICK: 1122 | AC 2       | IP: 129  | AR: 128  | PS: 001 | DR: 3       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1125 | AC 2       | IP: 130  | AR: 0    | PS: 001 | DR: 2       | mem[AR] 2       | CR: store 0      |
+  DEBUG   machine:__print__     TICK: 1128 | AC 2       | IP: 131  | AR: 165  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
+  DEBUG   machine:__print__     TICK: 1131 | AC 2       | IP: 119  | AR: 119  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 119      |
+  DEBUG   machine:__print__     TICK: 1134 | AC 176     | IP: 120  | AR: 40   | PS: 000 | DR: 176     | mem[AR] 176     | CR: load 40      |
+  DEBUG   machine:__print__     TICK: 1136 | AC 177     | IP: 121  | AR: 120  | PS: 000 | DR: 176     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK: 1139 | AC 177     | IP: 122  | AR: 40   | PS: 000 | DR: 177     | mem[AR] 177     | CR: store 40     |
+  DEBUG   machine:__print__     TICK: 1143 | AC 111     | IP: 123  | AR: 177  | PS: 000 | DR: 111     | mem[AR] 111     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT o
+  DEBUG   machine:__print__     TICK: 1147 | AC 111     | IP: 124  | AR: 2047 | PS: 000 | DR: 111     | mem[AR] 111     | CR: store 5      |
+  DEBUG   machine:__print__     TICK: 1150 | AC 71      | IP: 125  | AR: 39   | PS: 000 | DR: 71      | mem[AR] 71      | CR: load 39      |
+  DEBUG   machine:__print__     TICK: 1152 | AC 70      | IP: 126  | AR: 125  | PS: 001 | DR: 71      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1155 | AC 70      | IP: 127  | AR: 39   | PS: 001 | DR: 70      | mem[AR] 70      | CR: store 39     |
+  DEBUG   machine:__print__     TICK: 1158 | AC 2       | IP: 128  | AR: 0    | PS: 000 | DR: 2       | mem[AR] 2       | CR: load 0       |
+  DEBUG   machine:__print__     TICK: 1160 | AC 1       | IP: 129  | AR: 128  | PS: 001 | DR: 2       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1163 | AC 1       | IP: 130  | AR: 0    | PS: 001 | DR: 1       | mem[AR] 1       | CR: store 0      |
+  DEBUG   machine:__print__     TICK: 1166 | AC 1       | IP: 131  | AR: 165  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
+  DEBUG   machine:__print__     TICK: 1169 | AC 1       | IP: 119  | AR: 119  | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 119      |
+  DEBUG   machine:__print__     TICK: 1172 | AC 177     | IP: 120  | AR: 40   | PS: 000 | DR: 177     | mem[AR] 177     | CR: load 40      |
+  DEBUG   machine:__print__     TICK: 1174 | AC 178     | IP: 121  | AR: 120  | PS: 000 | DR: 177     | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK: 1177 | AC 178     | IP: 122  | AR: 40   | PS: 000 | DR: 178     | mem[AR] 178     | CR: store 40     |
+  DEBUG   machine:__print__     TICK: 1181 | AC 114     | IP: 123  | AR: 178  | PS: 000 | DR: 114     | mem[AR] 114     | CR: load 40      |
+  DEBUG   machine:wr            OUTPUT r
+  DEBUG   machine:__print__     TICK: 1185 | AC 114     | IP: 124  | AR: 2047 | PS: 000 | DR: 114     | mem[AR] 114     | CR: store 5      |
+  DEBUG   machine:__print__     TICK: 1188 | AC 70      | IP: 125  | AR: 39   | PS: 000 | DR: 70      | mem[AR] 70      | CR: load 39      |
+  DEBUG   machine:__print__     TICK: 1190 | AC 69      | IP: 126  | AR: 125  | PS: 001 | DR: 70      | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1193 | AC 69      | IP: 127  | AR: 39   | PS: 001 | DR: 69      | mem[AR] 69      | CR: store 39     |
+  DEBUG   machine:__print__     TICK: 1196 | AC 1       | IP: 128  | AR: 0    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 0       |
+  DEBUG   machine:__print__     TICK: 1198 | AC 0       | IP: 129  | AR: 128  | PS: 011 | DR: 1       | mem[AR] 0       | CR: dec          |
+  DEBUG   machine:__print__     TICK: 1201 | AC 0       | IP: 130  | AR: 0    | PS: 011 | DR: 0       | mem[AR] 0       | CR: store 0      |
+  DEBUG   machine:__print__     TICK: 1204 | AC 0       | IP: 165  | AR: 165  | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmz 165      |
+  DEBUG   machine:__print__     TICK: 1207 | AC 36      | IP: 166  | AR: 38   | PS: 000 | DR: 36      | mem[AR] 36      | CR: load 38      |
+  DEBUG   machine:__print__     TICK: 1209 | AC 37      | IP: 167  | AR: 166  | PS: 000 | DR: 36      | mem[AR] 0       | CR: inc          |
+  DEBUG   machine:__print__     TICK: 1212 | AC 37      | IP: 168  | AR: 38   | PS: 000 | DR: 37      | mem[AR] 37      | CR: store 38     |
+  DEBUG   machine:__print__     TICK: 1216 | AC 33      | IP: 169  | AR: 37   | PS: 000 | DR: 33      | mem[AR] 33      | CR: load 38      |
+  DEBUG   machine:wr            OUTPUT !
+  DEBUG   machine:__print__     TICK: 1220 | AC 33      | IP: 170  | AR: 2047 | PS: 000 | DR: 33      | mem[AR] 33      | CR: store 5      |
+  DEBUG   machine:__print__     TICK: 1223 | AC 33      | IP: 171  | AR: 171  | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 171      |
+  DEBUG   machine:__print__     TICK: 1225 | AC 33      | IP: 172  | AR: 171  | PS: 000 | DR: 0       | mem[AR] 0       | CR: hlt          |
