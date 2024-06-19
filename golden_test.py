@@ -8,9 +8,16 @@ import machine
 import translator
 import pytest
 
+# logger = logging.getLogger()
+# logger.setLevel(logging.DEBUG)
+# handler = logging.StreamHandler()
+# formatter = logging.Formatter("%(levelname)-7s %(module)s:%(funcName)-13s %(message)s")
+# handler.setFormatter(formatter)
+# logger.addHandler(handler)
+
 @pytest.mark.golden_test("golden/*.yml")
 def test_translator_and_machine(golden, caplog):
-    caplog.set_level(logging.INFO)
+    caplog.set_level(logging.DEBUG)
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         source = os.path.join(tmpdirname, "source.myasm")
