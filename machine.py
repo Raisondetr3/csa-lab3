@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import logging
 import sys
+
 from isa import *
 
 logger = logging.getLogger("machine_logger")
@@ -112,15 +113,21 @@ class DataPath:
     def wr(self):
         self.memory[self.registers["AR"]] = {"value": self.registers["DR"]}
         if self.registers["AR"] == OUTPUT_MAP:
-            self.output_buffer.append(chr(self.registers["DR"]) if isinstance(self.registers["DR"], int) else self.registers["DR"])
-            logger.info("OUTPUT " + str(self.output_buffer[-1]))
+            if isinstance(self.registers["DR"], int) and 0 <= self.registers["DR"] <= 0x10FFFF:
+                self.output_buffer.append(chr(self.registers["DR"]))
+                logging.debug("OUTPUT " + str(self.output_buffer[-1]))
+            else:
+                self.output_buffer.append(self.registers["DR"])
+                logging.debug("OUTPUT " + str(self.output_buffer[-1]))
+
+
 
     def rd(self):
         self.registers["DR"] = self.memory[self.registers["AR"]]["value"]
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
                 self.registers["DR"] = ord(self.input_buffer.pop(0))
-                logger.info("INPUT " + chr(self.registers["DR"]))
+                logging.debug("INPUT " + chr(self.registers["DR"]))
 
 class ControlUnit:
     def __init__(self, program, data_path, start_address, limit):
@@ -147,7 +154,7 @@ class ControlUnit:
         self.data_path.wr()
 
     def sig_read(self):
-        self.data_path.rd(self.instr_counter, self.current_tick())
+        self.data_path.rd()
 
     def tick(self):
         self._tick += 1
@@ -175,17 +182,13 @@ class ControlUnit:
             self.instr_counter += 1
             self.__print__()
         if self.instr_counter >= self.limit:
-            print("Limit exceeded!")
+            logging.warning("Limit exceeded!")
 
     def decode_and_execute_instruction(self):
         self.sig_latch_reg("AR", self.calc(0, self.get_reg("IP"), "add"))  # IP -> AR
         self.sig_latch_reg("IP", self.calc(1, self.get_reg("IP"), "add"))  # IP + 1 -> AR
         self.sig_latch_reg("CR", self.data_path.memory[self.get_reg("AR")])
         instr = self.get_reg("CR")
-
-        if "opcode" not in instr.keys():
-            print(f"Error: No opcode found in instruction at memory location {self.get_reg('AR')}")
-            return False
 
         opcode = instr["opcode"]
 
@@ -239,6 +242,7 @@ class ControlUnit:
         else:
             if opcode == "hlt":
                 self.tick()
+                self.__print__()
                 return False
 
             elif opcode == "cla":
@@ -269,7 +273,7 @@ class ControlUnit:
             self.get_reg("CR")["opcode"]
             + (lambda x: " " + str(x["operand"]) if "operand" in x.keys() else "")(self.get_reg("CR")),
         )
-        logger.info(state_repr)
+        logging.debug(state_repr)
 
 
 def simulation(code, limit, input_data, start_addr):
@@ -291,9 +295,17 @@ def main(code, input_f):
         input_data=input_token,
         start_addr=start_addr,
     )
-    print(f"Output: {''.join(output)}\nInstruction number: {instr_num}\nTicks: {ticks - 1}")
+
+    output_str = ''.join(map(str, output))
+    print(f"Output: {output_str}\nInstruction number: {instr_num}\nTicks: {ticks}")
+
 
 if __name__ == "__main__":
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='DEBUG    %(message)s',
+        handlers=[logging.StreamHandler(sys.stdout)]
+    )
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
     main(code_file, input_file)
