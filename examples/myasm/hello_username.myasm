@@ -1,4 +1,7 @@
 org 0
+user_name_len: word: 0
+
+org 2
 line_end: word: 0         ; End-of-line code
 stop_input: word: 0       ; Flag to stop input
 in: word: 2046            ; Input buffer address
@@ -37,7 +40,7 @@ print_loop: load print_str
                   jmz check_next
                   jmp loop
 
-print_name_loop: load print_str
+name_print_loop: load print_str
                  store print_cnt
                  name_loop: load print_addr
                        inc
@@ -89,13 +92,15 @@ name_print: load user_name
             load user_name_start
             dec
             store print_addr
-            jmp print_name_loop
+            jmp name_print_loop
 
-exclamation_print: load exclamation
-                   store print_str
-                   load exclamation_addr
-                   store print_addr
-                   jmp print_loop
+exclamation_print: load exclamation_addr       ; No loop because there's 1 character
+                   inc
+                   store exclamation_addr
+                   load (exclamation_addr)
+                   store (out)
+                   jmp end
+
 
 end: hlt
 
@@ -104,4 +109,3 @@ tmp: word: 0
 user_name_start: word: user_name
 user_name_address: word: user_name
 user_name: word: 0
-user_name_len: word: 0
