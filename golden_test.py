@@ -8,6 +8,9 @@ import machine
 import translator
 import pytest
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
+
 @pytest.mark.golden_test("golden/*.yml")
 def test_translator_and_machine(golden, caplog):
     caplog.set_level(logging.DEBUG)
