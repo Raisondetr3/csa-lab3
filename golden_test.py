@@ -7,10 +7,11 @@ import tempfile
 import machine
 import translator
 import pytest
+from pytest_golden.plugin import GoldenTestFixtureFactory
 
 
 @pytest.mark.golden_test("golden/*.yml")
-def test_translator_and_machine(golden, caplog):
+def test_translator_and_machine(golden: GoldenTestFixtureFactory, caplog):
     caplog.set_level(logging.INFO)
 
     with tempfile.TemporaryDirectory() as tmpdirname:
@@ -19,9 +20,9 @@ def test_translator_and_machine(golden, caplog):
         target = os.path.join(tmpdirname, "target.o")
 
         with open(source, "w", encoding="utf-8") as file:
-            file.write(golden["in_source"])
+            file.write(golden.get("in_source"))
         with open(input_stream, "w", encoding="utf-8") as file:
-            file.write(golden["in_stdin"])
+            file.write(golden.get("in_stdin"))
 
         # stdout
         with contextlib.redirect_stdout(io.StringIO()) as stdout:
