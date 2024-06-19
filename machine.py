@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 import logging
+from custom_formatter import CustomFormatter
 import sys
 
 from isa import *
+
+logger = logging.getLogger('machine')
+logger.setLevel(logging.DEBUG)
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+formatter = CustomFormatter('%(levelname)-8s %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
 
 class ALU:
     def __init__(self):
@@ -107,10 +116,10 @@ class DataPath:
         if self.registers["AR"] == OUTPUT_MAP:
             if isinstance(self.registers["DR"], int) and 0 <= self.registers["DR"] <= 0x10FFFF:
                 self.output_buffer.append(chr(self.registers["DR"]))
-                logging.debug("OUTPUT " + str(self.output_buffer[-1]))
+                logger.debug("machine:wr            OUTPUT " + str(self.output_buffer[-1]))
             else:
                 self.output_buffer.append(self.registers["DR"])
-                logging.debug("OUTPUT " + str(self.output_buffer[-1]))
+                logger.debug("machine:wr            OUTPUT " + str(self.output_buffer[-1]))
 
 
 
@@ -119,7 +128,7 @@ class DataPath:
         if self.registers["AR"] == INPUT_MAP:
             if self.input_buffer:
                 self.registers["DR"] = ord(self.input_buffer.pop(0))
-                logging.debug("INPUT " + chr(self.registers["DR"]))
+                logger.debug("   machine:rd      INPUT " + chr(self.registers["DR"]))
 
 class ControlUnit:
     def __init__(self, program, data_path, start_address, limit):
@@ -265,7 +274,7 @@ class ControlUnit:
             self.get_reg("CR")["opcode"]
             + (lambda x: " " + str(x["operand"]) if "operand" in x.keys() else "")(self.get_reg("CR")),
         )
-        logging.debug(state_repr)
+        logger.debug("machine:__print__     " + state_repr)
 
 
 def simulation(code, limit, input_data, start_addr):
@@ -293,11 +302,11 @@ def main(code, input_f):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format='DEBUG    %(message)s',
-        handlers=[logging.StreamHandler(sys.stdout)]
-    )
+    # logging.basicConfig(
+    #     level=logging.DEBUG,
+    #     format='DEBUG    %(message)s',
+    #     handlers=[logging.StreamHandler(sys.stdout)]
+    # )
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
     main(code_file, input_file)
