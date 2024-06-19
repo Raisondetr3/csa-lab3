@@ -28,4 +28,4 @@ jobs:
           poetry install
 
       - name: Run golden tests
-        run: pytest src/golden_test.py
+        run: pytest golden_test.py
