@@ -293,7 +293,11 @@ def main(code, input_f):
 
 
 if __name__ == "__main__":
-    logging.getLogger().setLevel(logging.DEBUG)
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='%(levelname)-7s %(module)s:%(funcName)-13s %(message)s',
+        handlers=[logging.StreamHandler(sys.stdout)]
+    )
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     _, code_file, input_file = sys.argv
     main(code_file, input_file)
