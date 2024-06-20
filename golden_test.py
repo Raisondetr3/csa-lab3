@@ -8,13 +8,6 @@ import machine
 import translator
 import pytest
 
-# logger = logging.getLogger()
-# logger.setLevel(logging.DEBUG)
-# handler = logging.StreamHandler()
-# formatter = logging.Formatter("%(levelname)-7s %(module)s:%(funcName)-13s %(message)s")
-# handler.setFormatter(formatter)
-# logger.addHandler(handler)
-
 def normalize_whitespace(s):
     return ' '.join(s.split())
 
