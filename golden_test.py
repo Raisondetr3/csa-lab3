@@ -18,9 +18,16 @@ import pytest
 def normalize_whitespace(s):
     return ' '.join(s.split())
 
+def ensure_newline_at_end(s):
+    if not s.endswith('\n'):
+        return s + '\n'
+    return s
+
 @pytest.mark.golden_test("golden/*.yml")
-def test_translator_and_machine(golden, caplog):
+def test_translator_and_machine(golden, caplog, capsys):
     caplog.set_level(logging.DEBUG)
+    logger = logging.getLogger("golden_test")
+    logger.setLevel(logging.DEBUG)
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         source = os.path.join(tmpdirname, "source.myasm")
@@ -42,6 +49,6 @@ def test_translator_and_machine(golden, caplog):
         with open(target, encoding="utf-8") as file:
             code = file.read()
 
-        assert normalize_whitespace(code) == normalize_whitespace(golden.out["out_code"])
+        assert ensure_newline_at_end(code) == ensure_newline_at_end(golden.out["out_code"])
         assert stdout.getvalue() == golden.out["out_stdout"]
         assert normalize_whitespace(caplog.text) == normalize_whitespace(golden.out["out_log"])

@@ -41,6 +41,7 @@ out_code: |
   {'index': 19, 'opcode': 'jmp', 'operand': 10, 'value': 0, 'address': False},
   {'index': 20, 'opcode': 'store', 'operand': 3, 'value': 0, 'address': True},
   {'index': 21, 'opcode': 'jmp', 'operand': 10, 'value': 0, 'address': False}]
+
 out_stdout: |
   source LoC: 21 code instr: 16
   ============================================================

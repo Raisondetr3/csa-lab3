@@ -232,11 +232,14 @@ out_code: |-
   {'index': 173, 'value': 175, 'opcode': 'nop'},
   {'index': 174, 'value': 175, 'opcode': 'nop'},
   {'index': 175, 'value': 0, 'opcode': 'nop'}]
+
 out_stdout: |
   source LoC: 111 code instr: 117
   ============================================================
-  What is your name? Hello, Igor!
-  instr_counter: 409 ticks: 1225
+  Output: What is your name? Hello, Igor!
+  Instruction number: 409
+  Ticks: 1225
+
 
 out_log: |
   DEBUG   machine:__print__     TICK:    3 | AC 18      | IP: 101  | AR: 6    | PS: 000 | DR: 18      | mem[AR] 18      | CR: load 6       |
