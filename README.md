@@ -220,7 +220,7 @@ hlt
 
 Реализован в классе `DataPath`.
 
-![Data Path](./processor.png)
+![Data Path](./processor.jpg)
 
 
 `data_memory` -- однопортовая память, поэтому либо читаем, либо пишем.
@@ -245,7 +245,7 @@ hlt
 
 Реализован в классе `ControlUnit`.
 
-![Control Unit](./control_unit.png)
+![Control Unit](./control_unit.jpg)
 
 - Метод `decode_and_execute_instruction` моделирует выполнение полного цикла инструкции (цикл выборки инструкции,
   операнда, исполнения)
