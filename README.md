@@ -319,6 +319,18 @@ jobs:
 - `pytest` -- утилита для запуска тестов.
 
 
+Пример использования и журнал работы процессора на примере `cat`:
+
+Пример использования для моего языка:
+
+```shell
+$ ./translator.py examples/myasm/cat.myasm target.out
+$ ./machine.py target.out examples/input/cat.txt
+
+```
+
+Выводится листинг всех регистров.
+
 - Значения всех регистров, кроме PS и CR выводятся в десятичном формате
 - Значение регистра `PS` выводится в двоичном формате для удобного определения флагов, наличия запроса прерываний и тд.
 - В качестве значения регистра `CR`выводятся код оператора и операнд (при наличии)
@@ -326,6 +338,94 @@ jobs:
 
 Также в лог выводятся события вида `INPUT symbol` и `OUTPUT symbol`
 
+``` shell
+$ cat examples/input/cat.txt
+foo
+$ ./translator.py examples/myasm/cat.myasm target.out
+source LoC: 21 code instr: 16
+$ cat target.out
+[
+{'start_addr': 10 },
+{'index': 0, 'value': 0, 'opcode': 'nop'},
+{'index': 1, 'value': 0, 'opcode': 'nop'},
+{'index': 2, 'value': 2046, 'opcode': 'nop'},
+{'index': 3, 'value': 2047, 'opcode': 'nop'},
+{'index': 10, 'opcode': 'load', 'operand': 1, 'value': 0, 'address': False},
+{'index': 11, 'opcode': 'jmz', 'operand': 13, 'value': 0, 'address': False},
+{'index': 12, 'opcode': 'hlt', 'value': 0},
+{'index': 13, 'opcode': 'load', 'operand': 2, 'value': 0, 'address': True},
+{'index': 14, 'opcode': 'cmp', 'operand': 0, 'value': 0, 'address': False},
+{'index': 15, 'opcode': 'jmnz', 'operand': 20, 'value': 0, 'address': False},
+{'index': 16, 'opcode': 'load', 'operand': 1, 'value': 0, 'address': False},
+{'index': 17, 'opcode': 'inc', 'value': 0},
+{'index': 18, 'opcode': 'store', 'operand': 1, 'value': 0, 'address': False},
+{'index': 19, 'opcode': 'jmp', 'operand': 10, 'value': 0, 'address': False},
+{'index': 20, 'opcode': 'store', 'operand': 3, 'value': 0, 'address': True},
+{'index': 21, 'opcode': 'jmp', 'operand': 10, 'value': 0, 'address': False}]
+$ ./machine.py target.out examples/input/cat.txt
+DEBUG   machine:__print__     TICK:    3 | AC 0       | IP: 11   | AR: 1    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 1       |
+DEBUG   machine:__print__     TICK:    6 | AC 0       | IP: 13   | AR: 13   | PS: 010 | DR: 0       | mem[AR] 0       | CR: jmz 13       |
+DEBUG   machine:rd            INPUT f
+DEBUG   machine:__print__     TICK:   10 | AC 102     | IP: 14   | AR: 2046 | PS: 000 | DR: 102     | mem[AR] 0       | CR: load 2       |
+DEBUG   machine:__print__     TICK:   13 | AC 102     | IP: 15   | AR: 0    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 0        |
+DEBUG   machine:__print__     TICK:   16 | AC 102     | IP: 20   | AR: 20   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 20      |
+DEBUG   machine:wr            OUTPUT f
+DEBUG   machine:__print__     TICK:   20 | AC 102     | IP: 21   | AR: 2047 | PS: 001 | DR: 102     | mem[AR] 102     | CR: store 3      |
+DEBUG   machine:__print__     TICK:   23 | AC 102     | IP: 10   | AR: 10   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 10       |
+DEBUG   machine:__print__     TICK:   26 | AC 0       | IP: 11   | AR: 1    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 1       |
+DEBUG   machine:__print__     TICK:   29 | AC 0       | IP: 13   | AR: 13   | PS: 010 | DR: 0       | mem[AR] 0       | CR: jmz 13       |
+DEBUG   machine:rd            INPUT o
+DEBUG   machine:__print__     TICK:   33 | AC 111     | IP: 14   | AR: 2046 | PS: 000 | DR: 111     | mem[AR] 0       | CR: load 2       |
+DEBUG   machine:__print__     TICK:   36 | AC 111     | IP: 15   | AR: 0    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 0        |
+DEBUG   machine:__print__     TICK:   39 | AC 111     | IP: 20   | AR: 20   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 20      |
+DEBUG   machine:wr            OUTPUT o
+DEBUG   machine:__print__     TICK:   43 | AC 111     | IP: 21   | AR: 2047 | PS: 001 | DR: 111     | mem[AR] 111     | CR: store 3      |
+DEBUG   machine:__print__     TICK:   46 | AC 111     | IP: 10   | AR: 10   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 10       |
+DEBUG   machine:__print__     TICK:   49 | AC 0       | IP: 11   | AR: 1    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 1       |
+DEBUG   machine:__print__     TICK:   52 | AC 0       | IP: 13   | AR: 13   | PS: 010 | DR: 0       | mem[AR] 0       | CR: jmz 13       |
+DEBUG   machine:rd            INPUT o
+DEBUG   machine:__print__     TICK:   56 | AC 111     | IP: 14   | AR: 2046 | PS: 000 | DR: 111     | mem[AR] 0       | CR: load 2       |
+DEBUG   machine:__print__     TICK:   59 | AC 111     | IP: 15   | AR: 0    | PS: 001 | DR: 0       | mem[AR] 0       | CR: cmp 0        |
+DEBUG   machine:__print__     TICK:   62 | AC 111     | IP: 20   | AR: 20   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmnz 20      |
+DEBUG   machine:wr            OUTPUT o
+DEBUG   machine:__print__     TICK:   66 | AC 111     | IP: 21   | AR: 2047 | PS: 001 | DR: 111     | mem[AR] 111     | CR: store 3      |
+DEBUG   machine:__print__     TICK:   69 | AC 111     | IP: 10   | AR: 10   | PS: 001 | DR: 0       | mem[AR] 0       | CR: jmp 10       |
+DEBUG   machine:__print__     TICK:   72 | AC 0       | IP: 11   | AR: 1    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 1       |
+DEBUG   machine:__print__     TICK:   75 | AC 0       | IP: 13   | AR: 13   | PS: 010 | DR: 0       | mem[AR] 0       | CR: jmz 13       |
+DEBUG   machine:__print__     TICK:   79 | AC 0       | IP: 14   | AR: 2046 | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 2       |
+DEBUG   machine:__print__     TICK:   82 | AC 0       | IP: 15   | AR: 0    | PS: 011 | DR: 0       | mem[AR] 0       | CR: cmp 0        |
+DEBUG   machine:__print__     TICK:   85 | AC 0       | IP: 16   | AR: 20   | PS: 011 | DR: 0       | mem[AR] 0       | CR: jmnz 20      |
+DEBUG   machine:__print__     TICK:   88 | AC 0       | IP: 17   | AR: 1    | PS: 010 | DR: 0       | mem[AR] 0       | CR: load 1       |
+DEBUG   machine:__print__     TICK:   90 | AC 1       | IP: 18   | AR: 17   | PS: 000 | DR: 0       | mem[AR] 0       | CR: inc          |
+DEBUG   machine:__print__     TICK:   93 | AC 1       | IP: 19   | AR: 1    | PS: 000 | DR: 1       | mem[AR] 1       | CR: store 1      |
+DEBUG   machine:__print__     TICK:   96 | AC 1       | IP: 10   | AR: 10   | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmp 10       |
+DEBUG   machine:__print__     TICK:   99 | AC 1       | IP: 11   | AR: 1    | PS: 000 | DR: 1       | mem[AR] 1       | CR: load 1       |
+DEBUG   machine:__print__     TICK:  102 | AC 1       | IP: 12   | AR: 13   | PS: 000 | DR: 0       | mem[AR] 0       | CR: jmz 13       |
+DEBUG   machine:__print__     TICK:  104 | AC 1       | IP: 13   | AR: 12   | PS: 000 | DR: 0       | mem[AR] 0       | CR: hlt          |
+Output: foo
+Instruction number: 32
+Ticks: 104
+```
+
+Пример проверки исходного кода:
+
+``` shell
+$ poetry run pytest . -v
+========================================================== test session starts ===========================================================
+platform darwin -- Python 3.11.9, pytest-8.2.2, pluggy-1.5.0 -- /Users/kurorolucifer/PycharmProjects/csa-lab3/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kurorolucifer/PycharmProjects/csa-lab3
+configfile: pyproject.toml
+plugins: golden-0.2.2
+collected 4 items                                                                                                                        
+
+golden_test.py::test_translator_and_machine[golden/hello_username.yml] PASSED                                                      [ 25%]
+golden_test.py::test_translator_and_machine[golden/cat.yml] PASSED                                                                 [ 50%]
+golden_test.py::test_translator_and_machine[golden/prob2.yml] PASSED                                                               [ 75%]
+golden_test.py::test_translator_and_machine[golden/hello.yml] PASSED                                                               [100%]
+
+=========================================================== 4 passed in 0.16s ============================================================
+```
 
 ```text
 | ФИО                        | алг              | LoC | code байт | code инстр. | инстр. | такт. | вариант |
